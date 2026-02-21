@@ -23,16 +23,31 @@ export default function Featured() {
         />
       </div>
 
-      {/* Полукруглый переход в синий — более выраженная арка */}
+      {/* Полноценный полукруг — синий */}
       <div
-        className="relative w-full flex flex-col items-center overflow-hidden"
+        className="relative w-full"
+        style={{ paddingTop: "0" }}
+      >
+        <svg
+          viewBox="0 0 480 240"
+          preserveAspectRatio="none"
+          className="w-full block"
+          style={{ display: "block" }}
+        >
+          <ellipse cx="240" cy="240" rx="240" ry="240" fill="#3a6186" />
+        </svg>
+      </div>
+
+      {/* Сплошная синяя заливка с контентом */}
+      <div
+        className="relative w-full flex flex-col items-center"
         style={{
           backgroundColor: "#3a6186",
-          borderRadius: "50% 50% 0 0 / 16% 16% 0 0",
-          paddingTop: "68px",
+          paddingTop: "8px",
           paddingBottom: "48px",
           paddingLeft: "28px",
           paddingRight: "28px",
+          marginTop: "-1px",
         }}
       >
         {/* Заголовок — большая каллиграфическая Д + остальное капсом */}
@@ -69,7 +84,6 @@ export default function Featured() {
           </div>
         </div>
 
-        {/* Основной текст — не uppercase, как в референсе мелким шрифтом */}
         <p
           className="text-center"
           style={{

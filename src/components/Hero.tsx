@@ -12,8 +12,8 @@ export default function Hero() {
   return (
     <div
       ref={container}
-      className="relative flex flex-col items-center overflow-hidden"
-      style={{ backgroundColor: "#f7f5f2", paddingTop: "56px", paddingBottom: "0" }}
+      className="relative flex flex-col items-center"
+      style={{ backgroundColor: "#f7f5f2", paddingTop: "56px", paddingBottom: "0", overflow: "visible" }}
     >
       {/* Wedding — смещён влево, каллиграфический */}
       <div className="relative w-full" style={{ marginBottom: "-0.35em" }}>
@@ -64,7 +64,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Day — смещён вправо, каллиграфический */}
-      <div className="relative w-full" style={{ marginTop: "-0.35em" }}>
+      <div className="relative w-full" style={{ marginTop: "-0.35em", paddingBottom: "0.3em" }}>
         <div
           className="select-none pointer-events-none"
           style={{
@@ -72,7 +72,7 @@ export default function Hero() {
             fontWeight: 400,
             fontSize: "min(24vw, 115px)",
             color: "#b8d4e8",
-            lineHeight: 1,
+            lineHeight: 1.15,
             textAlign: "right",
             paddingRight: "8%",
           }}
