@@ -8,15 +8,15 @@ export default function Featured() {
       {/* Лебеди — к левому краю, меньше вертикального пространства */}
       <div
         className="relative z-10 flex justify-start"
-        style={{ marginBottom: "-40px", width: "100%", paddingLeft: "4%" }}
+        style={{ marginBottom: "8px", width: "100%", paddingLeft: "4%" }}
       >
         <img
           src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/9060aa40-27ed-4bc2-a51f-eba2323146da.png"
           alt="лебеди"
           className="apple-shimmer-img"
           style={{
-            width: "120px",
-            height: "105px",
+            width: "360px",
+            height: "315px",
             objectFit: "contain",
             position: "relative",
             zIndex: 10,
