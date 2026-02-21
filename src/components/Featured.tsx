@@ -12,10 +12,10 @@ export default function Featured() {
       >
         {/* Лебеди — по центру, поверх полукруга */}
         <div
-          className="absolute z-10 flex justify-center"
+          className="absolute z-10"
           style={{
-            top: "-100px",
-            left: "50%",
+            top: "-60px",
+            left: "20%",
             transform: "translateX(-50%)",
           }}
         >
