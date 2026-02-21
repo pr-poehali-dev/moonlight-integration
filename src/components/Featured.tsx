@@ -31,12 +31,12 @@ export default function Featured() {
           />
         </div>
         <svg
-          viewBox="0 0 480 240"
+          viewBox="0 0 480 140"
           preserveAspectRatio="none"
           className="w-full block"
           style={{ display: "block" }}
         >
-          <ellipse cx="240" cy="240" rx="250" ry="240" fill="#3a6186" />
+          <ellipse cx="240" cy="140" rx="250" ry="140" fill="#3a6186" />
         </svg>
       </div>
 
@@ -141,12 +141,12 @@ export default function Featured() {
         style={{ marginTop: "-2px" }}
       >
         <svg
-          viewBox="0 0 480 240"
+          viewBox="0 0 480 140"
           preserveAspectRatio="none"
           className="w-full block"
           style={{ display: "block" }}
         >
-          <ellipse cx="240" cy="0" rx="250" ry="240" fill="#3a6186" />
+          <ellipse cx="240" cy="0" rx="250" ry="140" fill="#3a6186" />
         </svg>
       </div>
 
