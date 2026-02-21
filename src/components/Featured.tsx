@@ -343,6 +343,119 @@ export default function Featured() {
           </a>
         </div>
       </div>
+      {/* Программа дня */}
+      <div
+        className="w-full relative"
+        style={{
+          backgroundColor: "#3a6186",
+          padding: "0 12px",
+        }}
+      >
+        {/* Боковые полоски как на референсе */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "6px",
+            bottom: 0,
+            width: "2px",
+            background: "linear-gradient(to bottom, transparent, rgba(255,255,255,0.15) 10%, rgba(255,255,255,0.15) 90%, transparent)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "10px",
+            bottom: 0,
+            width: "1px",
+            background: "linear-gradient(to bottom, transparent, rgba(255,255,255,0.08) 10%, rgba(255,255,255,0.08) 90%, transparent)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            right: "6px",
+            bottom: 0,
+            width: "2px",
+            background: "linear-gradient(to bottom, transparent, rgba(255,255,255,0.15) 10%, rgba(255,255,255,0.15) 90%, transparent)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            right: "10px",
+            bottom: 0,
+            width: "1px",
+            background: "linear-gradient(to bottom, transparent, rgba(255,255,255,0.08) 10%, rgba(255,255,255,0.08) 90%, transparent)",
+          }}
+        />
+
+        <div style={{ padding: "40px 20px 48px" }}>
+          <p
+            className="uppercase text-center"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 600,
+              fontSize: "clamp(18px, 5.5vw, 26px)",
+              color: "#ffffff",
+              letterSpacing: "0.22em",
+              marginBottom: "36px",
+            }}
+          >
+            Программа дня
+          </p>
+
+          {/* Элементы программы */}
+          <div className="flex flex-col gap-6">
+            {[
+              { time: "15:00", title: "Сбор гостей", img: "🥂" },
+              { time: "16:00", title: "Церемония", img: "💍" },
+              { time: "17:00", title: "Банкет", img: "🍽" },
+              { time: "19:00", title: "Вечерняя программа", img: "🎶" },
+              { time: "22:00", title: "Завершение вечера", img: "✨" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center" style={{ gap: "0" }}>
+                <div
+                  className="flex items-center justify-center flex-shrink-0"
+                  style={{
+                    width: "33%",
+                    fontSize: "32px",
+                  }}
+                >
+                  {item.img}
+                </div>
+                <div style={{ width: "67%" }}>
+                  <p
+                    style={{
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontWeight: 600,
+                      fontSize: "clamp(15px, 4.2vw, 19px)",
+                      color: "#ffffff",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    {item.title}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "'Montserrat', sans-serif",
+                      fontWeight: 300,
+                      fontSize: "clamp(12px, 3.2vw, 14px)",
+                      color: "rgba(255,255,255,0.6)",
+                      marginTop: "2px",
+                    }}
+                  >
+                    {item.time}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
