@@ -14,8 +14,8 @@ export default function Featured() {
         <div
           className="absolute z-10"
           style={{
-            top: "-60px",
-            left: "20%",
+            top: "-90px",
+            left: "25%",
             transform: "translateX(-50%)",
           }}
         >
