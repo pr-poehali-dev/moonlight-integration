@@ -96,13 +96,14 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family:
       "Montserrat",
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
       sans-serif;
+    background-color: #e8e4df;
   }
 
   :root {
