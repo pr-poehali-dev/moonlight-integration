@@ -101,7 +101,7 @@ export default function Featured() {
           </p>
         </div>
 
-        <div className="w-[90%]">
+        <div className="w-[90%]" style={{ marginTop: "16px" }}>
           <p
             className="text-left"
             style={{
