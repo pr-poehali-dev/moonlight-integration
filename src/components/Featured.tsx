@@ -245,6 +245,84 @@ export default function Featured() {
           })}
         </div>
       </div>
+      {/* Место проведения */}
+      <div
+        className="w-full flex flex-row items-start"
+        style={{
+          backgroundColor: "#f9f7f4",
+          padding: "40px 5% 40px 0",
+          gap: "0",
+        }}
+      >
+        <div style={{ width: "45%", flexShrink: 0 }}>
+          <img
+            src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/e76057bf-d81b-4737-8d00-d87863eabf6f.jpg"
+            alt="Ротонда"
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "cover",
+              filter: "saturate(0.45) brightness(1.08) contrast(0.9)",
+              maskImage: "radial-gradient(ellipse 75% 70% at 50% 45%, black 40%, transparent 100%)",
+              WebkitMaskImage: "radial-gradient(ellipse 75% 70% at 50% 45%, black 40%, transparent 100%)",
+            }}
+          />
+        </div>
+
+        <div className="flex flex-col justify-center" style={{ paddingTop: "20px" }}>
+          <p
+            className="uppercase"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 600,
+              fontSize: "clamp(13px, 3.8vw, 17px)",
+              color: "#2c5a8a",
+              letterSpacing: "0.15em",
+              marginBottom: "12px",
+            }}
+          >
+            Место проведения
+          </p>
+          <p
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 300,
+              fontSize: "clamp(12px, 3.2vw, 14px)",
+              color: "#444",
+              lineHeight: 1.7,
+            }}
+          >
+            Московская область,
+            <br />
+            городской округ Мытищи,
+            <br />
+            Хлебниковский лесопарк,
+            <br />
+            <span style={{ fontWeight: 500, color: "#2c5a8a" }}>Hide</span>
+          </p>
+          <a
+            href="https://yandex.ru/maps/org/hide/42686447674/?ll=37.540750%2C55.732025&z=14"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              marginTop: "16px",
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 400,
+              fontSize: "clamp(11px, 3vw, 13px)",
+              color: "#ffffff",
+              backgroundColor: "#3a6186",
+              padding: "10px 20px",
+              borderRadius: "24px",
+              textDecoration: "none",
+              letterSpacing: "0.05em",
+              textAlign: "center",
+            }}
+          >
+            Проложить маршрут
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
