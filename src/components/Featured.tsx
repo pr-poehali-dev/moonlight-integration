@@ -5,30 +5,31 @@ export default function Featured() {
       className="relative flex flex-col items-center w-full"
       style={{ backgroundColor: "#f9f7f4", paddingBottom: "0" }}
     >
-      {/* Лебеди — к левому краю, меньше вертикального пространства */}
-      <div
-        className="relative z-10 flex justify-start"
-        style={{ marginBottom: "0", marginTop: "-58px", width: "100%", paddingLeft: "0", marginLeft: "-60px" }}
-      >
-        <img
-          src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/9060aa40-27ed-4bc2-a51f-eba2323146da.png"
-          alt="лебеди"
-          className="apple-shimmer-img"
-          style={{
-            width: "360px",
-            height: "315px",
-            objectFit: "contain",
-            position: "relative",
-            zIndex: 10,
-          }}
-        />
-      </div>
-
-      {/* Полукруг — вплотную к лебедям */}
+      {/* Полукруг с лебедями поверх */}
       <div
         className="relative w-full"
-        style={{ marginTop: "-4px" }}
+        style={{ marginTop: "-20px" }}
       >
+        {/* Лебеди — по центру, поверх полукруга */}
+        <div
+          className="absolute z-10 flex justify-center"
+          style={{
+            top: "-100px",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          <img
+            src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/df08f66f-e1aa-48c1-9124-320e18b4a730.png"
+            alt="лебеди"
+            className="apple-shimmer-img"
+            style={{
+              width: "220px",
+              height: "auto",
+              objectFit: "contain",
+            }}
+          />
+        </div>
         <svg
           viewBox="0 0 480 240"
           preserveAspectRatio="none"
@@ -39,7 +40,7 @@ export default function Featured() {
         </svg>
       </div>
 
-      {/* Сплошная синяя заливка с контентом — текст поднят наверх */}
+      {/* Сплошная синяя заливка с контентом */}
       <div
         className="relative w-full flex flex-col items-center"
         style={{
