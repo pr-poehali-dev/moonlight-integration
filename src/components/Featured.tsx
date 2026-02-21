@@ -52,17 +52,16 @@ export default function Featured() {
           marginTop: "-2px",
         }}
       >
-        <div className="flex flex-col items-center mb-5" style={{ marginTop: "-30px" }}>
-          <div className="flex items-start justify-center">
+        <div className="flex flex-col w-[90%] mb-5" style={{ marginTop: "-50px" }}>
+          <div className="flex items-start justify-between w-full">
             <span
               className="leading-none"
               style={{
                 fontFamily: "'Great Vibes', cursive",
                 fontWeight: 400,
-                fontSize: "clamp(58px, 16vw, 100px)",
+                fontSize: "clamp(70px, 20vw, 120px)",
                 color: "rgba(255,255,255,0.12)",
-                lineHeight: 0.85,
-                marginRight: "-4px",
+                lineHeight: 0.8,
                 userSelect: "none",
               }}
             >
@@ -72,12 +71,12 @@ export default function Featured() {
               className="uppercase"
               style={{
                 fontFamily: "'Montserrat', sans-serif",
-                fontWeight: 600,
-                fontSize: "clamp(13px, 3.8vw, 18px)",
+                fontWeight: 300,
+                fontSize: "clamp(14px, 4vw, 20px)",
                 color: "#ffffff",
-                letterSpacing: "0.14em",
+                letterSpacing: "0.22em",
                 lineHeight: 1.35,
-                paddingTop: "8px",
+                paddingTop: "10px",
                 whiteSpace: "nowrap",
               }}
             >
@@ -88,50 +87,49 @@ export default function Featured() {
             className="uppercase"
             style={{
               fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 600,
-              fontSize: "clamp(13px, 3.8vw, 18px)",
+              fontWeight: 300,
+              fontSize: "clamp(14px, 4vw, 20px)",
               color: "#ffffff",
-              letterSpacing: "0.14em",
+              letterSpacing: "0.22em",
               lineHeight: 1.35,
               alignSelf: "flex-end",
-              marginRight: "15%",
-              marginTop: "-4px",
+              marginTop: "-6px",
             }}
           >
             И ДРУЗЬЯ!
           </p>
         </div>
 
-        <p
-          className="text-center"
-          style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 300,
-            fontSize: "clamp(10px, 2.8vw, 13px)",
-            color: "rgba(255,255,255,0.82)",
-            letterSpacing: "0.04em",
-            lineHeight: 1.85,
-            maxWidth: "360px",
-          }}
-        >
-          Совсем скоро начнётся новая глава нашей жизни — мы станем семьёй.
-        </p>
-        <p
-          className="text-center mt-4"
-          style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 300,
-            fontSize: "clamp(10px, 2.8vw, 13px)",
-            color: "rgba(255,255,255,0.82)",
-            letterSpacing: "0.04em",
-            lineHeight: 1.85,
-            maxWidth: "360px",
-          }}
-        >
-          Нам бесконечно важно, чтобы именно вы разделили с нами эту радость
-          и были рядом в начале нашей семейной истории, наполнив этот день
-          своим теплом, улыбками и искренними объятиями.
-        </p>
+        <div className="w-[90%]">
+          <p
+            className="text-left"
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 300,
+              fontSize: "clamp(10px, 2.8vw, 13px)",
+              color: "rgba(255,255,255,0.82)",
+              letterSpacing: "0.04em",
+              lineHeight: 1.85,
+            }}
+          >
+            Совсем скоро начнётся новая глава нашей жизни — мы станем семьёй.
+          </p>
+          <p
+            className="text-left mt-4"
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 300,
+              fontSize: "clamp(10px, 2.8vw, 13px)",
+              color: "rgba(255,255,255,0.82)",
+              letterSpacing: "0.04em",
+              lineHeight: 1.85,
+            }}
+          >
+            Нам бесконечно важно, чтобы именно вы разделили с нами эту радость
+            и были рядом в начале нашей семейной истории, наполнив этот день
+            своим теплом, улыбками и искренними объятиями.
+          </p>
+        </div>
       </div>
     </div>
   );
