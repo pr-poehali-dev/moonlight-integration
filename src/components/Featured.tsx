@@ -132,7 +132,7 @@ export default function Featured() {
           </p>
         </div>
 
-        <div style={{ height: "48px" }} />
+        <div style={{ height: "16px" }} />
       </div>
 
       {/* Зеркальный полукруг снизу */}
