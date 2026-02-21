@@ -107,10 +107,10 @@ export default function Featured() {
             style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 300,
-              fontSize: "clamp(13px, 3.5vw, 15px)",
-              color: "rgba(255,255,255,0.85)",
+              fontSize: "clamp(14px, 4vw, 17px)",
+              color: "rgba(255,255,255,0.88)",
               letterSpacing: "0.03em",
-              lineHeight: 1.8,
+              lineHeight: 1.75,
             }}
           >
             Совсем скоро начнётся новая глава нашей жизни — мы станем семьёй.
@@ -120,10 +120,10 @@ export default function Featured() {
             style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 300,
-              fontSize: "clamp(13px, 3.5vw, 15px)",
-              color: "rgba(255,255,255,0.85)",
+              fontSize: "clamp(14px, 4vw, 17px)",
+              color: "rgba(255,255,255,0.88)",
               letterSpacing: "0.03em",
-              lineHeight: 1.8,
+              lineHeight: 1.75,
             }}
           >
             Нам бесконечно важно, чтобы именно вы разделили с нами эту радость
