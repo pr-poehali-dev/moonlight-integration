@@ -97,6 +97,21 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family:
+      "Montserrat",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+  }
+
+  :root {
+    --wedding-blue: #3a6186;
+    --wedding-blue-dark: #2c4f6b;
+    --wedding-blue-light: #7aafd4;
+    --wedding-blue-pale: #c8dff0;
+    --wedding-white: #faf8f5;
+    --wedding-cream: #f5f0e8;
+    --wedding-text: #2a3d52;
   }
 }
