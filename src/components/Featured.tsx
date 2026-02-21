@@ -8,7 +8,7 @@ export default function Featured() {
       {/* Лебеди — к левому краю, меньше вертикального пространства */}
       <div
         className="relative z-10 flex justify-start"
-        style={{ marginBottom: "8px", width: "100%", paddingLeft: "4%" }}
+        style={{ marginBottom: "8px", marginTop: "-16px", width: "100%", paddingLeft: "0", marginLeft: "-30px" }}
       >
         <img
           src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/9060aa40-27ed-4bc2-a51f-eba2323146da.png"
