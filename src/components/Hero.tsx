@@ -15,15 +15,14 @@ export default function Hero() {
       className="relative flex flex-col items-center"
       style={{ backgroundColor: "#f7f5f2", paddingTop: "56px", paddingBottom: "0", overflow: "visible" }}
     >
-      {/* Wedding — смещён влево, каллиграфический */}
+      {/* Wedding — смещён влево, каллиграфический, Apple shimmer */}
       <div className="relative w-full" style={{ marginBottom: "calc(-0.55em - 20px)" }}>
         <div
-          className="select-none pointer-events-none"
+          className="select-none pointer-events-none apple-shimmer-text"
           style={{
             fontFamily: "'Great Vibes', cursive",
             fontWeight: 400,
             fontSize: "min(24vw, 115px)",
-            color: "#b8d4e8",
             lineHeight: 1,
             textAlign: "left",
             paddingLeft: "5%",
@@ -33,7 +32,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Фото — размытое, приглушённое, растворяется к краям */}
+      {/* Фото */}
       <motion.div
         style={{ y }}
         className="relative z-10"
@@ -63,15 +62,14 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Day — смещён вправо, каллиграфический */}
+      {/* Day — смещён вправо, Apple shimmer */}
       <div className="relative w-full" style={{ marginTop: "calc(-0.55em - 20px)", paddingBottom: "0.3em" }}>
         <div
-          className="select-none pointer-events-none"
+          className="select-none pointer-events-none apple-shimmer-text"
           style={{
             fontFamily: "'Great Vibes', cursive",
             fontWeight: 400,
             fontSize: "min(24vw, 115px)",
-            color: "#b8d4e8",
             lineHeight: 1.15,
             textAlign: "right",
             paddingRight: "8%",

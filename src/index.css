@@ -116,3 +116,46 @@
     --wedding-text: #2a3d52;
   }
 }
+
+@keyframes apple-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.apple-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #a8c8e0 0%,
+    #d4e6f1 20%,
+    #e8d5c4 40%,
+    #c9b8d4 60%,
+    #d4e6f1 80%,
+    #a8c8e0 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: apple-shimmer 6s ease-in-out infinite;
+}
+
+.apple-shimmer-img {
+  animation: apple-shimmer-filter 6s ease-in-out infinite;
+}
+
+@keyframes apple-shimmer-filter {
+  0%,
+  100% {
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  33% {
+    filter: brightness(1.08) hue-rotate(10deg);
+  }
+  66% {
+    filter: brightness(1.04) hue-rotate(-8deg);
+  }
+}

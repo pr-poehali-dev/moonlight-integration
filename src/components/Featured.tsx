@@ -5,17 +5,18 @@ export default function Featured() {
       className="relative flex flex-col items-center w-full"
       style={{ backgroundColor: "#f7f5f2", paddingBottom: "0" }}
     >
-      {/* Лебеди без фона */}
+      {/* Лебеди с Apple shimmer */}
       <div
         className="relative z-10 flex justify-center"
         style={{ marginBottom: "-44px" }}
       >
         <img
-          src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/58b25a8c-998e-44c6-8307-0cbd3013a302.jpg"
+          src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/9060aa40-27ed-4bc2-a51f-eba2323146da.png"
           alt="лебеди"
+          className="apple-shimmer-img"
           style={{
-            width: "110px",
-            height: "95px",
+            width: "120px",
+            height: "105px",
             objectFit: "contain",
             position: "relative",
             zIndex: 10,
@@ -50,7 +51,6 @@ export default function Featured() {
           marginTop: "-1px",
         }}
       >
-        {/* Заголовок — большая каллиграфическая Д + остальное капсом */}
         <div className="flex items-start justify-center mb-5">
           <span
             className="leading-none"
