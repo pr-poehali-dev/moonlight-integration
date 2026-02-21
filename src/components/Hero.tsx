@@ -16,7 +16,7 @@ export default function Hero() {
       style={{ backgroundColor: "#f7f5f2", paddingTop: "56px", paddingBottom: "0", overflow: "visible" }}
     >
       {/* Wedding — смещён влево, каллиграфический */}
-      <div className="relative w-full" style={{ marginBottom: "-0.45em" }}>
+      <div className="relative w-full" style={{ marginBottom: "-0.55em" }}>
         <div
           className="select-none pointer-events-none"
           style={{
@@ -64,7 +64,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Day — смещён вправо, каллиграфический */}
-      <div className="relative w-full" style={{ marginTop: "-0.45em", paddingBottom: "0.3em" }}>
+      <div className="relative w-full" style={{ marginTop: "-0.55em", paddingBottom: "0.3em" }}>
         <div
           className="select-none pointer-events-none"
           style={{
