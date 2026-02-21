@@ -263,16 +263,16 @@ export default function Featured() {
           }}
         />
 
-        <div className="flex flex-col items-center" style={{ padding: "24px 28px 40px" }}>
+        <div className="flex flex-col items-center" style={{ padding: "0 28px 40px", marginTop: "-20px" }}>
           <p
             className="uppercase text-center"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: "clamp(14px, 4vw, 18px)",
+              fontSize: "clamp(18px, 5.5vw, 26px)",
               color: "#2c5a8a",
               letterSpacing: "0.18em",
-              marginBottom: "14px",
+              marginBottom: "16px",
             }}
           >
             Место проведения
@@ -284,13 +284,25 @@ export default function Featured() {
               fontWeight: 300,
               fontSize: "clamp(13px, 3.5vw, 15px)",
               color: "#555",
-              lineHeight: 1.7,
+              lineHeight: 1.8,
             }}
           >
-            Московская область, городской округ Мытищи,
+            Московская область,
             <br />
-            Хлебниковский лесопарк,{" "}
-            <span style={{ fontWeight: 500, color: "#2c5a8a" }}>Hide</span>
+            городской округ Мытищи,
+            <br />
+            Хлебниковский лесопарк,
+          </p>
+          <p
+            style={{
+              fontFamily: "'Great Vibes', cursive",
+              fontWeight: 400,
+              fontSize: "clamp(26px, 7vw, 36px)",
+              color: "#2c5a8a",
+              marginTop: "6px",
+            }}
+          >
+            Hide
           </p>
           <a
             href="https://yandex.ru/maps/org/hide/42686447674/?ll=37.540750%2C55.732025&z=14"
@@ -299,59 +311,37 @@ export default function Featured() {
             className="relative"
             style={{
               display: "inline-block",
-              marginTop: "22px",
-              padding: "12px 32px",
+              marginTop: "24px",
+              padding: "14px 36px",
               textDecoration: "none",
-              border: "1.5px solid #2c5a8a",
-              borderRadius: "4px",
-              boxShadow: "0 0 0 4px #f9f7f4, 0 0 0 5.5px rgba(44,90,138,0.3)",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 500,
               fontSize: "clamp(13px, 3.5vw, 16px)",
               color: "#2c5a8a",
               letterSpacing: "0.1em",
-              transition: "all 0.3s ease",
             }}
           >
-            <span
-              style={{
-                position: "absolute",
-                top: "-6px",
-                left: "-6px",
-                right: "-6px",
-                bottom: "-6px",
-                border: "1px solid rgba(44,90,138,0.2)",
-                borderRadius: "6px",
-                pointerEvents: "none",
-              }}
-            />
             <svg
-              style={{ position: "absolute", top: "-8px", left: "-8px", width: "16px", height: "16px" }}
-              viewBox="0 0 16 16" fill="none"
+              className="absolute inset-0 w-full h-full"
+              viewBox="0 0 200 50"
+              preserveAspectRatio="none"
+              fill="none"
+              style={{ overflow: "visible" }}
             >
-              <path d="M8 1C8 1 3 1 1 3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
-              <circle cx="4" cy="2" r="1" fill="#2c5a8a" opacity="0.3" />
-            </svg>
-            <svg
-              style={{ position: "absolute", top: "-8px", right: "-8px", width: "16px", height: "16px", transform: "scaleX(-1)" }}
-              viewBox="0 0 16 16" fill="none"
-            >
-              <path d="M8 1C8 1 3 1 1 3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
-              <circle cx="4" cy="2" r="1" fill="#2c5a8a" opacity="0.3" />
-            </svg>
-            <svg
-              style={{ position: "absolute", bottom: "-8px", left: "-8px", width: "16px", height: "16px", transform: "scaleY(-1)" }}
-              viewBox="0 0 16 16" fill="none"
-            >
-              <path d="M8 1C8 1 3 1 1 3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
-              <circle cx="4" cy="2" r="1" fill="#2c5a8a" opacity="0.3" />
-            </svg>
-            <svg
-              style={{ position: "absolute", bottom: "-8px", right: "-8px", width: "16px", height: "16px", transform: "scale(-1,-1)" }}
-              viewBox="0 0 16 16" fill="none"
-            >
-              <path d="M8 1C8 1 3 1 1 3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
-              <circle cx="4" cy="2" r="1" fill="#2c5a8a" opacity="0.3" />
+              <rect x="4" y="4" width="192" height="42" rx="3" stroke="#2c5a8a" strokeWidth="1" />
+              <rect x="1" y="1" width="198" height="48" rx="5" stroke="#2c5a8a" strokeWidth="0.5" opacity="0.4" />
+              <path d="M0 8 Q0 0 8 0" stroke="#2c5a8a" strokeWidth="1.2" fill="none" />
+              <path d="M200 8 Q200 0 192 0" stroke="#2c5a8a" strokeWidth="1.2" fill="none" />
+              <path d="M0 42 Q0 50 8 50" stroke="#2c5a8a" strokeWidth="1.2" fill="none" />
+              <path d="M200 42 Q200 50 192 50" stroke="#2c5a8a" strokeWidth="1.2" fill="none" />
+              <circle cx="0" cy="8" r="1.5" fill="#2c5a8a" opacity="0.3" />
+              <circle cx="200" cy="8" r="1.5" fill="#2c5a8a" opacity="0.3" />
+              <circle cx="0" cy="42" r="1.5" fill="#2c5a8a" opacity="0.3" />
+              <circle cx="200" cy="42" r="1.5" fill="#2c5a8a" opacity="0.3" />
+              <path d="M12 0 Q16 -3 20 0" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.4" />
+              <path d="M180 0 Q184 -3 188 0" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.4" />
+              <path d="M12 50 Q16 53 20 50" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.4" />
+              <path d="M180 50 Q184 53 188 50" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.4" />
             </svg>
             Проложить маршрут
           </a>
