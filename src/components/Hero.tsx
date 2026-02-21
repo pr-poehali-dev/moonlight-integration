@@ -33,7 +33,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Фото с градиентным растворением */}
+      {/* Фото — размытое, приглушённое, растворяется к краям */}
       <motion.div
         style={{ y }}
         className="relative z-10"
@@ -43,7 +43,7 @@ export default function Hero() {
             width: "min(60vw, 270px)",
             height: "min(72vw, 320px)",
             position: "relative",
-            overflow: "hidden",
+            overflow: "visible",
           }}
         >
           <img
@@ -55,18 +55,9 @@ export default function Hero() {
               objectFit: "cover",
               objectPosition: "top",
               display: "block",
-            }}
-          />
-          {/* Градиентная маска — растворение к краям */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: `
-                linear-gradient(to right, #f7f5f2 0%, transparent 18%, transparent 82%, #f7f5f2 100%),
-                linear-gradient(to bottom, #f7f5f2 0%, transparent 12%, transparent 85%, #f7f5f2 100%)
-              `,
-              pointerEvents: "none",
+              filter: "saturate(0.45) brightness(1.08) contrast(0.9)",
+              maskImage: "radial-gradient(ellipse 70% 65% at 50% 45%, black 40%, transparent 100%)",
+              WebkitMaskImage: "radial-gradient(ellipse 70% 65% at 50% 45%, black 40%, transparent 100%)",
             }}
           />
         </div>
