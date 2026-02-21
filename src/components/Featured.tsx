@@ -8,7 +8,7 @@ export default function Featured() {
       {/* Лебеди — в 3 раза больше, правее, Apple shimmer */}
       <div
         className="relative z-10 flex justify-end"
-        style={{ marginBottom: "-100px", width: "100%", paddingRight: "8%" }}
+        style={{ marginBottom: "-100px", width: "100%", paddingRight: "0", paddingLeft: "40%" }}
       >
         <img
           src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/9060aa40-27ed-4bc2-a51f-eba2323146da.png"
@@ -30,12 +30,12 @@ export default function Featured() {
         style={{ paddingTop: "0" }}
       >
         <svg
-          viewBox="0 0 480 160"
+          viewBox="0 0 480 240"
           preserveAspectRatio="none"
           className="w-full block"
           style={{ display: "block" }}
         >
-          <ellipse cx="240" cy="160" rx="260" ry="160" fill="#3a6186" />
+          <ellipse cx="240" cy="240" rx="250" ry="240" fill="#3a6186" />
         </svg>
       </div>
 
