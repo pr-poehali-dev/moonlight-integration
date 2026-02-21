@@ -254,7 +254,7 @@ export default function Featured() {
           gap: "0",
         }}
       >
-        <div style={{ width: "45%", flexShrink: 0 }}>
+        <div style={{ width: "55%", flexShrink: 0 }}>
           <img
             src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/e76057bf-d81b-4737-8d00-d87863eabf6f.jpg"
             alt="Ротонда"
@@ -304,22 +304,33 @@ export default function Featured() {
             href="https://yandex.ru/maps/org/hide/42686447674/?ll=37.540750%2C55.732025&z=14"
             target="_blank"
             rel="noopener noreferrer"
+            className="relative inline-block"
             style={{
-              display: "inline-block",
-              marginTop: "16px",
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 400,
-              fontSize: "clamp(11px, 3vw, 13px)",
-              color: "#ffffff",
-              backgroundColor: "#3a6186",
-              padding: "10px 20px",
-              borderRadius: "24px",
+              marginTop: "18px",
               textDecoration: "none",
-              letterSpacing: "0.05em",
-              textAlign: "center",
             }}
           >
-            Проложить маршрут
+            <img
+              src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/5249043a-35cf-45f5-aa62-55be532cd22c.png"
+              alt=""
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
+            <span
+              className="absolute inset-0 flex items-center justify-center"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontWeight: 500,
+                fontSize: "clamp(12px, 3.2vw, 15px)",
+                color: "#2c5a8a",
+                letterSpacing: "0.08em",
+              }}
+            >
+              Проложить маршрут
+            </span>
           </a>
         </div>
       </div>
