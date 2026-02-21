@@ -247,90 +247,113 @@ export default function Featured() {
       </div>
       {/* Место проведения */}
       <div
-        className="w-full flex flex-row items-start"
-        style={{
-          backgroundColor: "#f9f7f4",
-          padding: "40px 5% 40px 0",
-          gap: "0",
-        }}
+        className="w-full flex flex-col items-center"
+        style={{ backgroundColor: "#f9f7f4" }}
       >
-        <div style={{ width: "55%", flexShrink: 0 }}>
-          <img
-            src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/e76057bf-d81b-4737-8d00-d87863eabf6f.jpg"
-            alt="Ротонда"
-            style={{
-              width: "100%",
-              height: "auto",
-              objectFit: "cover",
-              filter: "saturate(0.45) brightness(1.08) contrast(0.9)",
-              maskImage: "radial-gradient(ellipse 75% 70% at 50% 45%, black 40%, transparent 100%)",
-              WebkitMaskImage: "radial-gradient(ellipse 75% 70% at 50% 45%, black 40%, transparent 100%)",
-            }}
-          />
-        </div>
+        <img
+          src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/e76057bf-d81b-4737-8d00-d87863eabf6f.jpg"
+          alt="Ротонда"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "cover",
+            filter: "saturate(0.45) brightness(1.08) contrast(0.9)",
+            maskImage: "linear-gradient(to bottom, transparent 0%, black 10%, black 85%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 10%, black 85%, transparent 100%)",
+          }}
+        />
 
-        <div className="flex flex-col justify-center" style={{ paddingTop: "20px" }}>
+        <div className="flex flex-col items-center" style={{ padding: "24px 28px 40px" }}>
           <p
-            className="uppercase"
+            className="uppercase text-center"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 600,
-              fontSize: "clamp(13px, 3.8vw, 17px)",
+              fontSize: "clamp(14px, 4vw, 18px)",
               color: "#2c5a8a",
-              letterSpacing: "0.15em",
-              marginBottom: "12px",
+              letterSpacing: "0.18em",
+              marginBottom: "14px",
             }}
           >
             Место проведения
           </p>
           <p
+            className="text-center"
             style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 300,
-              fontSize: "clamp(12px, 3.2vw, 14px)",
-              color: "#444",
+              fontSize: "clamp(13px, 3.5vw, 15px)",
+              color: "#555",
               lineHeight: 1.7,
             }}
           >
-            Московская область,
+            Московская область, городской округ Мытищи,
             <br />
-            городской округ Мытищи,
-            <br />
-            Хлебниковский лесопарк,
-            <br />
+            Хлебниковский лесопарк,{" "}
             <span style={{ fontWeight: 500, color: "#2c5a8a" }}>Hide</span>
           </p>
           <a
             href="https://yandex.ru/maps/org/hide/42686447674/?ll=37.540750%2C55.732025&z=14"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block"
+            className="relative"
             style={{
-              marginTop: "18px",
+              display: "inline-block",
+              marginTop: "22px",
+              padding: "12px 32px",
               textDecoration: "none",
+              border: "1.5px solid #2c5a8a",
+              borderRadius: "4px",
+              boxShadow: "0 0 0 4px #f9f7f4, 0 0 0 5.5px rgba(44,90,138,0.3)",
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 500,
+              fontSize: "clamp(13px, 3.5vw, 16px)",
+              color: "#2c5a8a",
+              letterSpacing: "0.1em",
+              transition: "all 0.3s ease",
             }}
           >
-            <img
-              src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/5249043a-35cf-45f5-aa62-55be532cd22c.png"
-              alt=""
+            <span
               style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
+                position: "absolute",
+                top: "-6px",
+                left: "-6px",
+                right: "-6px",
+                bottom: "-6px",
+                border: "1px solid rgba(44,90,138,0.2)",
+                borderRadius: "6px",
+                pointerEvents: "none",
               }}
             />
-            <span
-              className="absolute inset-0 flex items-center justify-center"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 500,
-                fontSize: "clamp(12px, 3.2vw, 15px)",
-                color: "#2c5a8a",
-                letterSpacing: "0.08em",
-              }}
+            <svg
+              style={{ position: "absolute", top: "-8px", left: "-8px", width: "16px", height: "16px" }}
+              viewBox="0 0 16 16" fill="none"
             >
-              Проложить маршрут
-            </span>
+              <path d="M8 1C8 1 3 1 1 3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <circle cx="4" cy="2" r="1" fill="#2c5a8a" opacity="0.3" />
+            </svg>
+            <svg
+              style={{ position: "absolute", top: "-8px", right: "-8px", width: "16px", height: "16px", transform: "scaleX(-1)" }}
+              viewBox="0 0 16 16" fill="none"
+            >
+              <path d="M8 1C8 1 3 1 1 3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <circle cx="4" cy="2" r="1" fill="#2c5a8a" opacity="0.3" />
+            </svg>
+            <svg
+              style={{ position: "absolute", bottom: "-8px", left: "-8px", width: "16px", height: "16px", transform: "scaleY(-1)" }}
+              viewBox="0 0 16 16" fill="none"
+            >
+              <path d="M8 1C8 1 3 1 1 3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <circle cx="4" cy="2" r="1" fill="#2c5a8a" opacity="0.3" />
+            </svg>
+            <svg
+              style={{ position: "absolute", bottom: "-8px", right: "-8px", width: "16px", height: "16px", transform: "scale(-1,-1)" }}
+              viewBox="0 0 16 16" fill="none"
+            >
+              <path d="M8 1C8 1 3 1 1 3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <circle cx="4" cy="2" r="1" fill="#2c5a8a" opacity="0.3" />
+            </svg>
+            Проложить маршрут
           </a>
         </div>
       </div>
