@@ -409,32 +409,47 @@ export default function Featured() {
           </p>
 
           {/* Элементы программы */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-0">
             {[
-              { time: "15:00", title: "Сбор гостей", img: "🥂" },
-              { time: "16:00", title: "Церемония", img: "💍" },
-              { time: "17:00", title: "Банкет", img: "🍽" },
-              { time: "19:00", title: "Вечерняя программа", img: "🎶" },
-              { time: "22:00", title: "Завершение вечера", img: "✨" },
+              { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/413aa284-4268-4f2a-aa00-ea7a1b40b481.png" },
+              { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/15c9eb6d-5fc6-495d-9842-33dbe38c49d2.jpg" },
+              { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/bd1edb32-e010-4ab7-81ba-4cd161123a27.jpg" },
+              { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/60406ff8-fc43-4ad3-a704-3eaa1f096968.jpg" },
+              { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/a26eb8c3-1cd9-482d-b85d-a0b7de747630.jpg" },
             ].map((item, i) => (
-              <div key={i} className="flex items-center" style={{ gap: "0" }}>
+              <div key={i} className="flex items-center" style={{ minHeight: "110px" }}>
                 <div
                   className="flex items-center justify-center flex-shrink-0"
-                  style={{
-                    width: "33%",
-                    fontSize: "32px",
-                  }}
+                  style={{ width: "33%" }}
                 >
-                  {item.img}
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      objectFit: "contain",
+                      borderRadius: "50%",
+                    }}
+                  />
                 </div>
-                <div style={{ width: "67%" }}>
+                <div
+                  className="flex-shrink-0"
+                  style={{
+                    width: "1px",
+                    alignSelf: "stretch",
+                    backgroundColor: "rgba(255,255,255,0.25)",
+                  }}
+                />
+                <div style={{ width: "67%", paddingLeft: "24px" }}>
                   <p
+                    className="uppercase"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       fontWeight: 600,
                       fontSize: "clamp(15px, 4.2vw, 19px)",
                       color: "#ffffff",
-                      letterSpacing: "0.05em",
+                      letterSpacing: "0.12em",
                     }}
                   >
                     {item.title}
@@ -443,9 +458,10 @@ export default function Featured() {
                     style={{
                       fontFamily: "'Montserrat', sans-serif",
                       fontWeight: 300,
-                      fontSize: "clamp(12px, 3.2vw, 14px)",
-                      color: "rgba(255,255,255,0.6)",
-                      marginTop: "2px",
+                      fontSize: "clamp(13px, 3.5vw, 16px)",
+                      color: "rgba(255,255,255,0.55)",
+                      marginTop: "4px",
+                      letterSpacing: "0.05em",
                     }}
                   >
                     {item.time}
