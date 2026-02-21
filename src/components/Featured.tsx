@@ -8,7 +8,7 @@ export default function Featured() {
       {/* Лебеди — к левому краю, меньше вертикального пространства */}
       <div
         className="relative z-10 flex justify-start"
-        style={{ marginBottom: "8px", marginTop: "-16px", width: "100%", paddingLeft: "0", marginLeft: "-30px" }}
+        style={{ marginBottom: "0", marginTop: "-8px", width: "100%", paddingLeft: "0", marginLeft: "-60px" }}
       >
         <img
           src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/9060aa40-27ed-4bc2-a51f-eba2323146da.png"
@@ -24,10 +24,10 @@ export default function Featured() {
         />
       </div>
 
-      {/* Овальный полукруг — более вытянутый */}
+      {/* Полукруг — вплотную к лебедям */}
       <div
         className="relative w-full"
-        style={{ paddingTop: "0" }}
+        style={{ marginTop: "-4px" }}
       >
         <svg
           viewBox="0 0 480 240"
