@@ -13,7 +13,7 @@ export default function Hero() {
     <div
       ref={container}
       className="relative flex flex-col items-center"
-      style={{ backgroundColor: "#f7f5f2", paddingTop: "56px", paddingBottom: "0", overflow: "visible" }}
+      style={{ backgroundColor: "#f9f7f4", paddingTop: "56px", paddingBottom: "0", overflow: "visible" }}
     >
       {/* Wedding — z-30 верхний слой, не обрезается */}
       <div
