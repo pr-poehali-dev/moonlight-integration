@@ -7,59 +7,80 @@ export default function Hero() {
     target: container,
     offset: ["start start", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "15vh"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "12vh"]);
 
   return (
     <div
       ref={container}
       className="relative flex flex-col items-center overflow-hidden"
-      style={{ backgroundColor: "#f7f5f2", paddingTop: "56px", paddingBottom: "40px" }}
+      style={{ backgroundColor: "#f7f5f2", paddingTop: "56px", paddingBottom: "0" }}
     >
-      {/* Wedding — смещён влево */}
-      <div className="relative w-full" style={{ marginBottom: "-0.15em" }}>
+      {/* Wedding — смещён влево, каллиграфический */}
+      <div className="relative w-full" style={{ marginBottom: "-0.35em" }}>
         <div
-          className="select-none italic pointer-events-none"
+          className="select-none pointer-events-none"
           style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 300,
-            fontSize: "min(22vw, 110px)",
-            color: "#c8dff0",
+            fontFamily: "'Great Vibes', cursive",
+            fontWeight: 400,
+            fontSize: "min(24vw, 115px)",
+            color: "#b8d4e8",
             lineHeight: 1,
             textAlign: "left",
-            paddingLeft: "6%",
+            paddingLeft: "5%",
           }}
         >
           Wedding
         </div>
       </div>
 
-      {/* Фото по центру */}
+      {/* Фото с градиентным растворением */}
       <motion.div
         style={{ y }}
-        className="relative z-10 overflow-hidden"
+        className="relative z-10"
       >
-        <img
-          src="https://cdn.poehali.dev/files/aaede4b6-2f4c-439f-99c0-8b1d4f651454.jpg"
-          alt="Иван и Алёна"
+        <div
           style={{
-            width: "min(62vw, 280px)",
-            height: "min(62vw, 280px)",
-            objectFit: "cover",
-            objectPosition: "top",
-            display: "block",
+            width: "min(60vw, 270px)",
+            height: "min(72vw, 320px)",
+            position: "relative",
+            overflow: "hidden",
           }}
-        />
+        >
+          <img
+            src="https://cdn.poehali.dev/files/aaede4b6-2f4c-439f-99c0-8b1d4f651454.jpg"
+            alt="Иван и Алёна"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "top",
+              display: "block",
+            }}
+          />
+          {/* Градиентная маска — растворение к краям */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: `
+                linear-gradient(to right, #f7f5f2 0%, transparent 18%, transparent 82%, #f7f5f2 100%),
+                linear-gradient(to bottom, #f7f5f2 0%, transparent 12%, transparent 85%, #f7f5f2 100%)
+              `,
+              pointerEvents: "none",
+            }}
+          />
+        </div>
       </motion.div>
 
-      {/* Day — смещён вправо */}
-      <div className="relative w-full" style={{ marginTop: "-0.15em" }}>
+      {/* Day — смещён вправо, каллиграфический */}
+      <div className="relative w-full" style={{ marginTop: "-0.35em" }}>
         <div
-          className="select-none italic pointer-events-none"
+          className="select-none pointer-events-none"
           style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 300,
-            fontSize: "min(22vw, 110px)",
-            color: "#c8dff0",
+            fontFamily: "'Great Vibes', cursive",
+            fontWeight: 400,
+            fontSize: "min(24vw, 115px)",
+            color: "#b8d4e8",
             lineHeight: 1,
             textAlign: "right",
             paddingRight: "8%",
@@ -67,27 +88,6 @@ export default function Hero() {
         >
           Day
         </div>
-      </div>
-
-      {/* Подпись */}
-      <div className="flex flex-col items-center mt-8 gap-3 px-8 text-center">
-        <p
-          className="uppercase text-center"
-          style={{
-            color: "#5a7a99",
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 400,
-            fontSize: "9px",
-            letterSpacing: "0.25em",
-            lineHeight: 2,
-          }}
-        >
-          Этот особенный для нас день,
-          <br />
-          который мы хотим
-          <br />
-          разделить с вами
-        </p>
       </div>
     </div>
   );

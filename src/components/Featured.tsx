@@ -5,60 +5,60 @@ export default function Featured() {
       className="relative flex flex-col items-center w-full"
       style={{ backgroundColor: "#f7f5f2", paddingBottom: "0" }}
     >
-      {/* Цветок над аркой */}
+      {/* Лебеди */}
       <div
         className="relative z-10 flex justify-center"
-        style={{ marginBottom: "-60px" }}
+        style={{ marginBottom: "-50px" }}
       >
         <img
-          src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/63669907-0cf9-4174-b75c-08392eac366c.jpg"
-          alt="цветок"
+          src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/c20c0c2e-2fdd-4b6e-8b25-80299f579fb4.jpg"
+          alt="лебеди"
           style={{
-            width: "140px",
-            height: "140px",
+            width: "120px",
+            height: "100px",
             objectFit: "contain",
-            filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.15))",
             position: "relative",
             zIndex: 10,
+            mixBlendMode: "multiply",
           }}
         />
       </div>
 
-      {/* Синяя арка */}
+      {/* Полукруглый переход в синий */}
       <div
         className="relative w-full flex flex-col items-center"
         style={{
           backgroundColor: "#3a6186",
-          borderRadius: "50% 50% 0 0 / 8% 8% 0 0",
-          paddingTop: "80px",
+          borderRadius: "50% 50% 0 0 / 12% 12% 0 0",
+          paddingTop: "72px",
           paddingBottom: "60px",
           paddingLeft: "32px",
           paddingRight: "32px",
         }}
       >
-        {/* Буква Д декоративная */}
+        {/* Буква Д декоративная + заголовок */}
         <div className="flex items-start justify-center mb-4">
           <span
-            className="italic leading-none"
+            className="leading-none"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Great Vibes', cursive",
               fontWeight: 400,
-              fontSize: "clamp(72px, 20vw, 130px)",
-              color: "rgba(255,255,255,0.15)",
+              fontSize: "clamp(64px, 18vw, 110px)",
+              color: "rgba(255,255,255,0.13)",
               lineHeight: 0.85,
-              marginRight: "-8px",
+              marginRight: "-6px",
               userSelect: "none",
             }}
           >
             Д
           </span>
-          <div className="flex flex-col items-start pt-4">
+          <div className="flex flex-col items-start pt-3">
             <p
               className="uppercase font-semibold text-center"
               style={{
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(14px, 4vw, 22px)",
+                fontSize: "clamp(14px, 4vw, 20px)",
                 color: "#ffffff",
                 letterSpacing: "0.12em",
                 lineHeight: 1.3,
@@ -70,17 +70,16 @@ export default function Featured() {
           </div>
         </div>
 
-        {/* Основной текст */}
         <p
           className="text-center uppercase"
           style={{
             fontFamily: "'Montserrat', sans-serif",
             fontWeight: 400,
-            fontSize: "clamp(9px, 2.5vw, 12px)",
-            color: "rgba(255,255,255,0.85)",
+            fontSize: "clamp(8px, 2.4vw, 11px)",
+            color: "rgba(255,255,255,0.8)",
             letterSpacing: "0.2em",
-            lineHeight: 1.9,
-            maxWidth: "360px",
+            lineHeight: 2,
+            maxWidth: "340px",
           }}
         >
           Хотим, чтобы вы разделили с нами радость
