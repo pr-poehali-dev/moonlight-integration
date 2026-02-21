@@ -5,18 +5,18 @@ export default function Featured() {
       className="relative flex flex-col items-center w-full"
       style={{ backgroundColor: "#f7f5f2", paddingBottom: "0" }}
     >
-      {/* Лебеди с Apple shimmer */}
+      {/* Лебеди — в 3 раза больше, правее, Apple shimmer */}
       <div
-        className="relative z-10 flex justify-center"
-        style={{ marginBottom: "-44px" }}
+        className="relative z-10 flex justify-end"
+        style={{ marginBottom: "-100px", width: "100%", paddingRight: "8%" }}
       >
         <img
           src="https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/9060aa40-27ed-4bc2-a51f-eba2323146da.png"
           alt="лебеди"
           className="apple-shimmer-img"
           style={{
-            width: "120px",
-            height: "105px",
+            width: "340px",
+            height: "300px",
             objectFit: "contain",
             position: "relative",
             zIndex: 10,
@@ -24,31 +24,31 @@ export default function Featured() {
         />
       </div>
 
-      {/* Полноценный полукруг — синий */}
+      {/* Овальный полукруг — более вытянутый */}
       <div
         className="relative w-full"
         style={{ paddingTop: "0" }}
       >
         <svg
-          viewBox="0 0 480 240"
+          viewBox="0 0 480 160"
           preserveAspectRatio="none"
           className="w-full block"
           style={{ display: "block" }}
         >
-          <ellipse cx="240" cy="240" rx="240" ry="240" fill="#3a6186" />
+          <ellipse cx="240" cy="160" rx="260" ry="160" fill="#3a6186" />
         </svg>
       </div>
 
-      {/* Сплошная синяя заливка с контентом */}
+      {/* Сплошная синяя заливка с контентом — текст поднят наверх */}
       <div
         className="relative w-full flex flex-col items-center"
         style={{
           backgroundColor: "#3a6186",
-          paddingTop: "8px",
+          paddingTop: "0",
           paddingBottom: "48px",
           paddingLeft: "28px",
           paddingRight: "28px",
-          marginTop: "-1px",
+          marginTop: "-2px",
         }}
       >
         <div className="flex items-start justify-center mb-5">

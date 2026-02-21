@@ -15,27 +15,32 @@ export default function Hero() {
       className="relative flex flex-col items-center"
       style={{ backgroundColor: "#f7f5f2", paddingTop: "56px", paddingBottom: "0", overflow: "visible" }}
     >
-      {/* Wedding — смещён влево, каллиграфический, Apple shimmer */}
-      <div className="relative w-full" style={{ marginBottom: "calc(-0.55em - 20px)" }}>
+      {/* Wedding — z-30 верхний слой, не обрезается */}
+      <div
+        className="relative w-full"
+        style={{ marginBottom: "calc(-0.55em - 20px)", zIndex: 30, overflow: "visible" }}
+      >
         <div
           className="select-none pointer-events-none apple-shimmer-text"
           style={{
             fontFamily: "'Great Vibes', cursive",
             fontWeight: 400,
             fontSize: "min(24vw, 115px)",
-            lineHeight: 1,
+            lineHeight: 1.2,
             textAlign: "left",
             paddingLeft: "5%",
+            paddingTop: "0.15em",
           }}
         >
           Wedding
         </div>
       </div>
 
-      {/* Фото */}
+      {/* Фото — под Wedding/Day */}
       <motion.div
         style={{ y }}
-        className="relative z-10"
+        className="relative"
+        style2={{ zIndex: 5 }}
       >
         <div
           style={{
@@ -43,6 +48,7 @@ export default function Hero() {
             height: "min(72vw, 320px)",
             position: "relative",
             overflow: "visible",
+            zIndex: 5,
           }}
         >
           <img
@@ -62,8 +68,11 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Day — смещён вправо, Apple shimmer */}
-      <div className="relative w-full" style={{ marginTop: "calc(-0.55em - 20px)", paddingBottom: "0.3em" }}>
+      {/* Day — z-30 верхний слой */}
+      <div
+        className="relative w-full"
+        style={{ marginTop: "calc(-0.55em - 20px)", paddingBottom: "0.3em", zIndex: 30, overflow: "visible" }}
+      >
         <div
           className="select-none pointer-events-none apple-shimmer-text"
           style={{
