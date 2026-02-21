@@ -312,7 +312,7 @@ export default function Featured() {
             style={{
               display: "inline-block",
               marginTop: "24px",
-              padding: "14px 36px",
+              padding: "14px 40px",
               textDecoration: "none",
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 500,
@@ -323,25 +323,24 @@ export default function Featured() {
           >
             <svg
               className="absolute inset-0 w-full h-full"
-              viewBox="0 0 200 50"
+              viewBox="0 0 220 56"
               preserveAspectRatio="none"
               fill="none"
               style={{ overflow: "visible" }}
             >
-              <rect x="4" y="4" width="192" height="42" rx="3" stroke="#2c5a8a" strokeWidth="1" />
-              <rect x="1" y="1" width="198" height="48" rx="5" stroke="#2c5a8a" strokeWidth="0.5" opacity="0.4" />
-              <path d="M0 8 Q0 0 8 0" stroke="#2c5a8a" strokeWidth="1.2" fill="none" />
-              <path d="M200 8 Q200 0 192 0" stroke="#2c5a8a" strokeWidth="1.2" fill="none" />
-              <path d="M0 42 Q0 50 8 50" stroke="#2c5a8a" strokeWidth="1.2" fill="none" />
-              <path d="M200 42 Q200 50 192 50" stroke="#2c5a8a" strokeWidth="1.2" fill="none" />
-              <circle cx="0" cy="8" r="1.5" fill="#2c5a8a" opacity="0.3" />
-              <circle cx="200" cy="8" r="1.5" fill="#2c5a8a" opacity="0.3" />
-              <circle cx="0" cy="42" r="1.5" fill="#2c5a8a" opacity="0.3" />
-              <circle cx="200" cy="42" r="1.5" fill="#2c5a8a" opacity="0.3" />
-              <path d="M12 0 Q16 -3 20 0" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.4" />
-              <path d="M180 0 Q184 -3 188 0" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.4" />
-              <path d="M12 50 Q16 53 20 50" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.4" />
-              <path d="M180 50 Q184 53 188 50" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.4" />
+              <rect x="6" y="6" width="208" height="44" rx="2" stroke="#2c5a8a" strokeWidth="1.2" />
+              <path d="M18 0 L202 0" stroke="#2c5a8a" strokeWidth="0.8" />
+              <path d="M18 56 L202 56" stroke="#2c5a8a" strokeWidth="0.8" />
+              <path d="M0 16 L0 40" stroke="#2c5a8a" strokeWidth="0.8" />
+              <path d="M220 16 L220 40" stroke="#2c5a8a" strokeWidth="0.8" />
+              <path d="M18 0 Q0 0 0 16" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <path d="M202 0 Q220 0 220 16" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <path d="M18 56 Q0 56 0 40" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <path d="M202 56 Q220 56 220 40" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <path d="M110 -1 L110 -5 M107 -3 L110 -6 L113 -3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <path d="M106 -1 Q110 -4 114 -1" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.5" />
+              <path d="M110 57 L110 61 M107 59 L110 62 L113 59" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+              <path d="M106 57 Q110 60 114 57" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.5" />
             </svg>
             Проложить маршрут
           </a>
