@@ -94,7 +94,7 @@ export default function Featured() {
               letterSpacing: "0.18em",
               lineHeight: 1.35,
               alignSelf: "flex-end",
-              marginTop: "-6px",
+              marginTop: "-14px",
             }}
           >
             И ДРУЗЬЯ!
