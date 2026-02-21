@@ -52,7 +52,7 @@ export default function Featured() {
           marginTop: "-2px",
         }}
       >
-        <div className="flex flex-col w-[90%] mb-5" style={{ marginTop: "-50px" }}>
+        <div className="flex flex-col w-[90%] mb-5" style={{ marginTop: "-80px" }}>
           <div className="flex items-start w-full">
             <span
               className="leading-none"
