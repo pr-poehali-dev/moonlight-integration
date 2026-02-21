@@ -53,15 +53,16 @@ export default function Featured() {
         }}
       >
         <div className="flex flex-col w-[90%] mb-5" style={{ marginTop: "-50px" }}>
-          <div className="flex items-start justify-between w-full">
+          <div className="flex items-start w-full">
             <span
               className="leading-none"
               style={{
                 fontFamily: "'Great Vibes', cursive",
                 fontWeight: 400,
-                fontSize: "clamp(70px, 20vw, 120px)",
+                fontSize: "clamp(58px, 16vw, 100px)",
                 color: "rgba(255,255,255,0.12)",
                 lineHeight: 0.8,
+                marginRight: "-2px",
                 userSelect: "none",
               }}
             >
@@ -70,13 +71,13 @@ export default function Featured() {
             <p
               className="uppercase"
               style={{
-                fontFamily: "'Montserrat', sans-serif",
-                fontWeight: 300,
-                fontSize: "clamp(14px, 4vw, 20px)",
+                fontFamily: "'Cormorant Garamond', serif",
+                fontWeight: 400,
+                fontSize: "clamp(15px, 4.5vw, 22px)",
                 color: "#ffffff",
-                letterSpacing: "0.22em",
+                letterSpacing: "0.18em",
                 lineHeight: 1.35,
-                paddingTop: "10px",
+                paddingTop: "8px",
                 whiteSpace: "nowrap",
               }}
             >
@@ -86,11 +87,11 @@ export default function Featured() {
           <p
             className="uppercase"
             style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 300,
-              fontSize: "clamp(14px, 4vw, 20px)",
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 400,
+              fontSize: "clamp(15px, 4.5vw, 22px)",
               color: "#ffffff",
-              letterSpacing: "0.22em",
+              letterSpacing: "0.18em",
               lineHeight: 1.35,
               alignSelf: "flex-end",
               marginTop: "-6px",
@@ -106,10 +107,10 @@ export default function Featured() {
             style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 300,
-              fontSize: "clamp(10px, 2.8vw, 13px)",
-              color: "rgba(255,255,255,0.82)",
-              letterSpacing: "0.04em",
-              lineHeight: 1.85,
+              fontSize: "clamp(13px, 3.5vw, 15px)",
+              color: "rgba(255,255,255,0.85)",
+              letterSpacing: "0.03em",
+              lineHeight: 1.8,
             }}
           >
             Совсем скоро начнётся новая глава нашей жизни — мы станем семьёй.
@@ -119,10 +120,10 @@ export default function Featured() {
             style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 300,
-              fontSize: "clamp(10px, 2.8vw, 13px)",
-              color: "rgba(255,255,255,0.82)",
-              letterSpacing: "0.04em",
-              lineHeight: 1.85,
+              fontSize: "clamp(13px, 3.5vw, 15px)",
+              color: "rgba(255,255,255,0.85)",
+              letterSpacing: "0.03em",
+              lineHeight: 1.8,
             }}
           >
             Нам бесконечно важно, чтобы именно вы разделили с нами эту радость
