@@ -1,81 +1,49 @@
 export default function Footer() {
   return (
     <div
-      className="relative h-[400px] sm:h-[600px] lg:h-[800px] max-h-[800px]"
+      className="relative h-[400px] sm:h-[500px] max-h-[500px]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="relative h-[calc(100vh+400px)] sm:h-[calc(100vh+600px)] lg:h-[calc(100vh+800px)] -top-[100vh]">
-        <div className="h-[400px] sm:h-[600px] lg:h-[800px] sticky top-[calc(100vh-400px)] sm:top-[calc(100vh-600px)] lg:top-[calc(100vh-800px)]">
+      <div className="relative h-[calc(100vh+400px)] sm:h-[calc(100vh+500px)] -top-[100vh]">
+        <div className="h-[400px] sm:h-[500px] sticky top-[calc(100vh-400px)] sm:top-[calc(100vh-500px)]">
           <div
-            className="py-4 sm:py-6 lg:py-10 px-6 sm:px-10 h-full w-full flex flex-col justify-between"
-            style={{ backgroundColor: "var(--wedding-blue-dark)" }}
+            className="py-8 px-8 h-full w-full flex flex-col justify-between items-center"
+            style={{ backgroundColor: "#3a6186" }}
           >
-            <div className="flex shrink-0 gap-8 sm:gap-16 lg:gap-24">
-              <div className="flex flex-col gap-2">
-                <h3
-                  className="mb-2 uppercase tracking-widest text-xs"
-                  style={{ color: "var(--wedding-blue-light)", fontFamily: "'Montserrat', sans-serif" }}
-                >
-                  Программа дня
-                </h3>
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--wedding-white)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-                >
-                  15:30 — Сбор гостей
-                </span>
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--wedding-white)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-                >
-                  16:00 — Церемония
-                </span>
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--wedding-white)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-                >
-                  17:00 — Банкет
-                </span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <h3
-                  className="mb-2 uppercase tracking-widest text-xs"
-                  style={{ color: "var(--wedding-blue-light)", fontFamily: "'Montserrat', sans-serif" }}
-                >
-                  Связаться
-                </h3>
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--wedding-white)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-                >
-                  Иван: +7 (900) 000-00-00
-                </span>
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--wedding-white)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-                >
-                  Алёна: +7 (900) 000-00-01
-                </span>
-              </div>
+            <div className="flex flex-col items-center gap-3 text-center">
+              <p
+                className="uppercase tracking-[0.35em] text-xs"
+                style={{ color: "rgba(200,223,240,0.7)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
+              >
+                Ждём вас
+              </p>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "rgba(255,255,255,0.7)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300, maxWidth: "280px" }}
+              >
+                По всем вопросам обращайтесь к организаторам
+              </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
+            <div className="flex flex-col items-center">
               <h1
-                className="text-[14vw] sm:text-[13vw] lg:text-[11vw] leading-[0.85] mt-4 sm:mt-6 lg:mt-10 italic"
+                className="italic text-center"
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
                   fontWeight: 300,
-                  color: "var(--wedding-white)",
+                  fontSize: "clamp(72px, 22vw, 160px)",
+                  color: "#ffffff",
+                  lineHeight: 0.9,
                   letterSpacing: "-0.02em",
                 }}
               >
-                I & A
+                I &amp; A
               </h1>
               <p
-                className="text-xs uppercase tracking-widest"
-                style={{ color: "var(--wedding-blue-pale)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
+                className="uppercase tracking-[0.35em] mt-4"
+                style={{ color: "rgba(200,223,240,0.6)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300, fontSize: "10px" }}
               >
-                15 апреля 2026
+                с любовью
               </p>
             </div>
           </div>

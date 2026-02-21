@@ -7,88 +7,91 @@ export default function Hero() {
     target: container,
     offset: ["start start", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "40vh"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "20vh"]);
 
   return (
     <div
       ref={container}
-      className="relative flex items-center justify-center h-screen overflow-hidden"
-      style={{ backgroundColor: "var(--wedding-white)" }}
+      className="relative flex flex-col items-center overflow-hidden"
+      style={{ backgroundColor: "#f7f5f2", minHeight: "100vh", paddingTop: "72px", paddingBottom: "48px" }}
     >
-      <motion.div
-        style={{ y }}
-        className="absolute inset-0 w-full h-full"
+      {/* Имена вверху */}
+      <p
+        className="uppercase tracking-[0.45em] text-center mb-4"
+        style={{ color: "#3a6186", fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontSize: "11px" }}
       >
-        <img
-          src="https://cdn.poehali.dev/files/aaede4b6-2f4c-439f-99c0-8b1d4f651454.jpg"
-          alt="Иван и Алёна"
-          className="w-full h-full object-cover object-top"
-          style={{ filter: "brightness(0.55) saturate(0.7)" }}
-        />
+        Иван &amp; Алёна
+      </p>
+
+      {/* Слово WEDDING + фото + DAY — всё в одной колонке */}
+      <div className="relative flex flex-col items-center w-full">
+
+        {/* WEDDING — крупно, за фото */}
         <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(58,97,134,0.35) 0%, rgba(44,79,107,0.55) 100%)",
-          }}
-        />
-      </motion.div>
-
-      <motion.div
-        style={{ opacity }}
-        className="relative z-10 text-center px-6 flex flex-col items-center"
-      >
-        <p
-          className="uppercase tracking-[0.35em] text-xs md:text-sm mb-6"
-          style={{ color: "var(--wedding-blue-pale)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-        >
-          Иван & Алёна
-        </p>
-
-        <h1
-          className="text-6xl md:text-8xl lg:text-[9rem] leading-none mb-6 italic"
+          className="relative z-0 text-center leading-none select-none italic pointer-events-none"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 300,
-            color: "var(--wedding-white)",
-            letterSpacing: "0.02em",
+            fontSize: "clamp(64px, 17vw, 200px)",
+            color: "#c8dff0",
+            marginBottom: "-0.18em",
+            lineHeight: 1,
           }}
         >
           Wedding
-          <br />
-          <span style={{ color: "var(--wedding-blue-pale)" }}>Day</span>
-        </h1>
+        </div>
 
-        <div
-          className="w-16 h-px my-6"
-          style={{ backgroundColor: "var(--wedding-blue-light)" }}
-        />
-
-        <p
-          className="uppercase tracking-[0.2em] text-sm"
-          style={{ color: "var(--wedding-white)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-        >
-          15 апреля 2026
-        </p>
-      </motion.div>
-
-      <motion.div
-        style={{ opacity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
-      >
-        <span
-          className="text-xs uppercase tracking-widest"
-          style={{ color: "var(--wedding-blue-pale)", fontFamily: "'Montserrat', sans-serif" }}
-        >
-          листайте
-        </span>
+        {/* Фото квадратное поверх букв */}
         <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-          style={{ width: 1, height: 32, backgroundColor: "var(--wedding-blue-pale)" }}
-        />
-      </motion.div>
+          style={{ y }}
+          className="relative z-10 overflow-hidden shadow-xl"
+          style2={{ y }}
+          sx={{
+            width: "min(56vw, 320px)",
+            aspectRatio: "1 / 1",
+          }}
+        >
+          <img
+            src="https://cdn.poehali.dev/files/aaede4b6-2f4c-439f-99c0-8b1d4f651454.jpg"
+            alt="Иван и Алёна"
+            style={{
+              width: "min(56vw, 320px)",
+              height: "min(56vw, 320px)",
+              objectFit: "cover",
+              objectPosition: "top",
+              filter: "grayscale(100%)",
+              display: "block",
+            }}
+          />
+        </motion.div>
+
+        {/* DAY */}
+        <div
+          className="relative z-0 text-center leading-none select-none italic pointer-events-none"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontWeight: 300,
+            fontSize: "clamp(64px, 17vw, 200px)",
+            color: "#c8dff0",
+            marginTop: "-0.18em",
+            lineHeight: 1,
+          }}
+        >
+          Day
+        </div>
+      </div>
+
+      {/* Подпись под всем */}
+      <div className="flex flex-col items-center mt-8 gap-2 px-8 text-center">
+        <p
+          className="uppercase text-center"
+          style={{ color: "#5a7a99", fontFamily: "'Montserrat', sans-serif", fontWeight: 400, fontSize: "10px", letterSpacing: "0.22em" }}
+        >
+          Этот особенный для нас день,
+          <br />
+          который мы хотим разделить с вами
+        </p>
+      </div>
     </div>
   );
 }

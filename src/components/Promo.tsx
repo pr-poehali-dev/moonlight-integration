@@ -1,107 +1,103 @@
-import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
-
 export default function Promo() {
-  const container = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["-10vh", "10vh"]);
+  // Апрель 2026: 1 апреля — среда (0=пн...6=вс)
+  const days = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+  // 1 апреля 2026 — среда (индекс 2)
+  const firstDayIndex = 2;
+  const totalDays = 30;
+
+  const cells: (number | null)[] = [];
+  for (let i = 0; i < firstDayIndex; i++) cells.push(null);
+  for (let d = 1; d <= totalDays; d++) cells.push(d);
+  while (cells.length % 7 !== 0) cells.push(null);
 
   return (
     <div
-      ref={container}
-      className="relative flex items-center justify-center h-screen overflow-hidden"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      id="details"
+      className="w-full flex flex-col items-center"
+      style={{ backgroundColor: "#3a6186", paddingBottom: "60px" }}
     >
-      <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
-        <motion.div style={{ y }} className="relative w-full h-full">
-          <div
-            className="w-full h-full"
-            style={{
-              background:
-                "linear-gradient(135deg, var(--wedding-blue-dark) 0%, var(--wedding-blue) 40%, var(--wedding-blue-light) 100%)",
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 20% 80%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px), radial-gradient(circle at 50% 50%, white 0.5px, transparent 0.5px)",
-              backgroundSize: "60px 60px, 80px 80px, 40px 40px",
-            }}
-          />
-        </motion.div>
-      </div>
+      {/* Заголовок месяца */}
+      <p
+        className="uppercase tracking-[0.35em] text-center mt-10 mb-6"
+        style={{
+          fontFamily: "'Montserrat', sans-serif",
+          fontWeight: 500,
+          fontSize: "13px",
+          color: "#ffffff",
+          letterSpacing: "0.35em",
+        }}
+      >
+        Апрель
+      </p>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-8 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="uppercase tracking-[0.4em] text-xs mb-8"
-          style={{ color: "var(--wedding-blue-pale)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-        >
-          15 апреля 2026
-        </motion.p>
-
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl italic mb-8 leading-tight"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 300,
-            color: "var(--wedding-white)",
-          }}
-        >
-          Антихрупкость —<br />
-          <span style={{ color: "var(--wedding-blue-pale)" }}>это любовь</span>
-        </motion.h2>
-
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: 80 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="h-px mb-8"
-          style={{ backgroundColor: "var(--wedding-blue-pale)" }}
-        />
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="text-base md:text-lg max-w-xl leading-relaxed"
-          style={{ color: "rgba(200, 223, 240, 0.85)", fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}
-        >
-          Хотим, чтобы вы разделили с нами радость и были на торжестве
-          в самый лучший и трогательный день нашей жизни!
-        </motion.p>
-      </div>
-
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex gap-16 text-center">
-        {[
-          { num: "15", label: "апреля" },
-          { num: "2026", label: "года" },
-          { num: "∞", label: "любви" },
-        ].map((item) => (
-          <div key={item.label}>
-            <p
-              className="text-4xl md:text-5xl italic"
-              style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--wedding-white)", fontWeight: 300 }}
+      {/* Календарь */}
+      <div style={{ width: "min(90vw, 360px)" }}>
+        {/* Дни недели */}
+        <div className="grid grid-cols-7 mb-2">
+          {days.map((d) => (
+            <div
+              key={d}
+              className="text-center"
+              style={{
+                fontFamily: "'Montserrat', sans-serif",
+                fontWeight: 400,
+                fontSize: "10px",
+                color: "rgba(255,255,255,0.6)",
+                letterSpacing: "0.1em",
+                paddingBottom: "8px",
+              }}
             >
-              {item.num}
-            </p>
-            <p
-              className="uppercase tracking-widest text-xs mt-1"
-              style={{ color: "var(--wedding-blue-pale)", fontFamily: "'Montserrat', sans-serif" }}
-            >
-              {item.label}
-            </p>
-          </div>
-        ))}
+              {d}
+            </div>
+          ))}
+        </div>
+
+        {/* Числа */}
+        <div className="grid grid-cols-7 gap-y-2">
+          {cells.map((cell, i) => {
+            const isWeddingDay = cell === 15;
+            return (
+              <div key={i} className="flex items-center justify-center" style={{ height: "40px" }}>
+                {cell !== null && (
+                  <div
+                    className="flex items-center justify-center"
+                    style={{
+                      width: isWeddingDay ? "36px" : "32px",
+                      height: isWeddingDay ? "36px" : "32px",
+                      borderRadius: "50%",
+                      border: isWeddingDay ? "1.5px solid rgba(255,255,255,0.7)" : "none",
+                      position: "relative",
+                    }}
+                  >
+                    {isWeddingDay && (
+                      <span
+                        style={{
+                          position: "absolute",
+                          fontSize: "18px",
+                          top: "-4px",
+                          right: "-4px",
+                          lineHeight: 1,
+                        }}
+                      >
+                        🤍
+                      </span>
+                    )}
+                    <span
+                      style={{
+                        fontFamily: "'Cormorant Garamond', serif",
+                        fontWeight: isWeddingDay ? 600 : 300,
+                        fontSize: isWeddingDay ? "17px" : "15px",
+                        color: "#ffffff",
+                      }}
+                    >
+                      {cell}
+                    </span>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
