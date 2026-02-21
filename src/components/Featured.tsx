@@ -8,7 +8,7 @@ export default function Featured() {
       {/* Полукруг с лебедями поверх */}
       <div
         className="relative w-full"
-        style={{ marginTop: "-20px" }}
+        style={{ marginTop: "20px" }}
       >
         {/* Лебеди — по центру, поверх полукруга */}
         <div
@@ -24,7 +24,7 @@ export default function Featured() {
             alt="лебеди"
             className="apple-shimmer-img"
             style={{
-              width: "220px",
+              width: "330px",
               height: "auto",
               objectFit: "contain",
             }}
