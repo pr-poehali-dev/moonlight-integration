@@ -52,22 +52,22 @@ export default function Featured() {
           marginTop: "-2px",
         }}
       >
-        <div className="flex items-start justify-center mb-5">
-          <span
-            className="leading-none"
-            style={{
-              fontFamily: "'Great Vibes', cursive",
-              fontWeight: 400,
-              fontSize: "clamp(58px, 16vw, 100px)",
-              color: "rgba(255,255,255,0.12)",
-              lineHeight: 0.85,
-              marginRight: "-4px",
-              userSelect: "none",
-            }}
-          >
-            Д
-          </span>
-          <div className="flex flex-col items-start pt-2">
+        <div className="flex flex-col items-center mb-5" style={{ marginTop: "-30px" }}>
+          <div className="flex items-start justify-center">
+            <span
+              className="leading-none"
+              style={{
+                fontFamily: "'Great Vibes', cursive",
+                fontWeight: 400,
+                fontSize: "clamp(58px, 16vw, 100px)",
+                color: "rgba(255,255,255,0.12)",
+                lineHeight: 0.85,
+                marginRight: "-4px",
+                userSelect: "none",
+              }}
+            >
+              Д
+            </span>
             <p
               className="uppercase"
               style={{
@@ -77,12 +77,29 @@ export default function Featured() {
                 color: "#ffffff",
                 letterSpacing: "0.14em",
                 lineHeight: 1.35,
+                paddingTop: "8px",
+                whiteSpace: "nowrap",
               }}
             >
               ОРОГИЕ РОДНЫЕ
-              <br />И ДРУЗЬЯ!
             </p>
           </div>
+          <p
+            className="uppercase"
+            style={{
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: 600,
+              fontSize: "clamp(13px, 3.8vw, 18px)",
+              color: "#ffffff",
+              letterSpacing: "0.14em",
+              lineHeight: 1.35,
+              alignSelf: "flex-end",
+              marginRight: "15%",
+              marginTop: "-4px",
+            }}
+          >
+            И ДРУЗЬЯ!
+          </p>
         </div>
 
         <p
