@@ -337,10 +337,7 @@ export default function Featured() {
               <path d="M202 0 Q220 0 220 16" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
               <path d="M18 56 Q0 56 0 40" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
               <path d="M202 56 Q220 56 220 40" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
-              <path d="M110 -1 L110 -5 M107 -3 L110 -6 L113 -3" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
-              <path d="M106 -1 Q110 -4 114 -1" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.5" />
-              <path d="M110 57 L110 61 M107 59 L110 62 L113 59" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
-              <path d="M106 57 Q110 60 114 57" stroke="#2c5a8a" strokeWidth="0.6" fill="none" opacity="0.5" />
+            
             </svg>
             Проложить маршрут
           </a>
