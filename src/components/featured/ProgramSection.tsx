@@ -65,11 +65,11 @@ export default function ProgramSection() {
 
         <div className="flex flex-col gap-0">
           {[
-            { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/a491489a-a09f-4d7d-81f8-57aa2b5b59a6.jpg" },
-            { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/8ff1203c-d547-4934-a37a-759a702eb1ab.jpg" },
-            { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/10728be5-3764-403a-91ea-25daa9ee4364.jpg" },
-            { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/5e81e210-b5cb-461d-bad8-5703ad2affa7.jpg" },
-            { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/659ae092-9174-4d07-bc4c-650d5cbad1d4.jpg" },
+            { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/a491489a-a09f-4d7d-81f8-57aa2b5b59a6.jpg", scale: 0.75 },
+            { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/8ff1203c-d547-4934-a37a-759a702eb1ab.jpg", scale: 0.7 },
+            { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/10728be5-3764-403a-91ea-25daa9ee4364.jpg", scale: 0.7 },
+            { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/5e81e210-b5cb-461d-bad8-5703ad2affa7.jpg", scale: 0.75 },
+            { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/659ae092-9174-4d07-bc4c-650d5cbad1d4.jpg", scale: 0.85 },
           ].map((item, i) => (
             <div key={i} className="flex items-center" style={{ minHeight: "130px" }}>
               <div
@@ -83,6 +83,7 @@ export default function ProgramSection() {
                     borderRadius: "50%",
                     overflow: "hidden",
                     border: "1.5px solid rgba(255,255,255,0.3)",
+                    backgroundColor: "#ece8e1",
                   }}
                 >
                   <img
@@ -91,7 +92,8 @@ export default function ProgramSection() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      objectFit: "contain",
+                      transform: `scale(${item.scale})`,
                     }}
                   />
                 </div>
