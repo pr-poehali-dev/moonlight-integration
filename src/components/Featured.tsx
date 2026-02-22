@@ -411,11 +411,11 @@ export default function Featured() {
           {/* Элементы программы */}
           <div className="flex flex-col gap-0">
             {[
-              { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/413aa284-4268-4f2a-aa00-ea7a1b40b481.png" },
-              { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/760b2d38-b5a6-4e8a-8837-9fd31bbb0725.jpg" },
-              { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/df57a842-dfbe-4060-a6e4-8697781c9052.jpg" },
-              { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/b75cc59e-dc1a-4242-bc55-8f4c1026053a.jpg" },
-              { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/fae3319c-b4f9-46c3-b45f-34d28a9b55b2.jpg" },
+              { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/413aa284-4268-4f2a-aa00-ea7a1b40b481.png", fit: "cover" as const, pos: "center" },
+              { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/760b2d38-b5a6-4e8a-8837-9fd31bbb0725.jpg", fit: "cover" as const, pos: "center" },
+              { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/df57a842-dfbe-4060-a6e4-8697781c9052.jpg", fit: "cover" as const, pos: "center 60%" },
+              { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/b75cc59e-dc1a-4242-bc55-8f4c1026053a.jpg", fit: "cover" as const, pos: "center 20%" },
+              { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/fae3319c-b4f9-46c3-b45f-34d28a9b55b2.jpg", fit: "cover" as const, pos: "center" },
             ].map((item, i) => (
               <div key={i} className="flex items-center" style={{ minHeight: "130px" }}>
                 <div
@@ -428,20 +428,17 @@ export default function Featured() {
                       height: "100px",
                       borderRadius: "50%",
                       overflow: "hidden",
-                      backgroundColor: "#ece8e1",
                       border: "1.5px solid rgba(255,255,255,0.3)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
                     }}
                   >
                     <img
                       src={item.img}
                       alt={item.title}
                       style={{
-                        width: "85%",
-                        height: "85%",
-                        objectFit: "contain",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: item.fit,
+                        objectPosition: item.pos,
                       }}
                     />
                   </div>
