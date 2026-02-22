@@ -65,11 +65,11 @@ export default function ProgramSection() {
 
         <div className="flex flex-col gap-0">
           {[
-            { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/a491489a-a09f-4d7d-81f8-57aa2b5b59a6.jpg", scale: 0.75 },
-            { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/8ff1203c-d547-4934-a37a-759a702eb1ab.jpg", scale: 0.7 },
-            { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/10728be5-3764-403a-91ea-25daa9ee4364.jpg", scale: 0.7 },
-            { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/5e81e210-b5cb-461d-bad8-5703ad2affa7.jpg", scale: 0.75 },
-            { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/659ae092-9174-4d07-bc4c-650d5cbad1d4.jpg", scale: 0.85 },
+            { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/66cb0bcd-59b4-4467-b07e-0ae82a0f6513.jpg" },
+            { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/005db500-5df8-44e3-a860-a063ff1bbecc.jpg" },
+            { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/06742f21-3602-402e-a990-5d842737af4b.jpg" },
+            { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/002d17c1-46b3-4151-a830-f878cee88ffc.jpg" },
+            { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/ee86e747-dea9-44c4-8f9e-24e6704a72ae.jpg" },
           ].map((item, i) => (
             <div key={i} className="flex items-center" style={{ minHeight: "130px" }}>
               <div
@@ -92,8 +92,7 @@ export default function ProgramSection() {
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "contain",
-                      transform: `scale(${item.scale})`,
+                      objectFit: "cover",
                     }}
                   />
                 </div>
