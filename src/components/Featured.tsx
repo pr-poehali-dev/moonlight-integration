@@ -4,6 +4,7 @@ import VenueSection from "./featured/VenueSection";
 import ProgramSection from "./featured/ProgramSection";
 import DressCodeSection from "./featured/DressCodeSection";
 import GuestSurveySection from "./featured/GuestSurveySection";
+import WishesSection from "./featured/WishesSection";
 
 export default function Featured() {
   return (
@@ -18,6 +19,7 @@ export default function Featured() {
       <ProgramSection />
       <DressCodeSection />
       <GuestSurveySection />
+      <WishesSection />
     </div>
   );
 }
