@@ -15,7 +15,7 @@ export default function WishesSection() {
         className="absolute left-0 right-0 flex flex-col items-center text-center"
         style={{
           maxWidth: "420px",
-          top: "42%",
+          top: "50%",
           transform: "translateY(-50%)",
           margin: "0 auto",
           padding: "0 24px",
@@ -26,7 +26,7 @@ export default function WishesSection() {
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 600,
-            fontSize: "clamp(22px, 6.5vw, 32px)",
+            fontSize: "clamp(18px, 5vw, 24px)",
             color: "#2c5a8a",
             letterSpacing: "0.22em",
             marginBottom: "24px",
@@ -39,8 +39,8 @@ export default function WishesSection() {
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
-            fontSize: "clamp(15px, 4.2vw, 18px)",
-            lineHeight: 1.7,
+            fontSize: "clamp(13px, 3.6vw, 15px)",
+            lineHeight: 1.65,
             color: "#2c5a8a",
             letterSpacing: "0.03em",
           }}
@@ -52,11 +52,11 @@ export default function WishesSection() {
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
-            fontSize: "clamp(15px, 4.2vw, 18px)",
-            lineHeight: 1.7,
+            fontSize: "clamp(13px, 3.6vw, 15px)",
+            lineHeight: 1.65,
             color: "#2c5a8a",
             letterSpacing: "0.03em",
-            marginTop: "14px",
+            marginTop: "10px",
           }}
         >
           Поэтому вместо букетов и алкоголя мы будем рады корму, пледам, игрушкам
@@ -67,11 +67,11 @@ export default function WishesSection() {
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 500,
-            fontSize: "clamp(15px, 4.2vw, 18px)",
-            lineHeight: 1.7,
+            fontSize: "clamp(13px, 3.6vw, 15px)",
+            lineHeight: 1.65,
             color: "#2c5a8a",
             letterSpacing: "0.03em",
-            marginTop: "14px",
+            marginTop: "10px",
             fontStyle: "italic",
           }}
         >
@@ -83,11 +83,11 @@ export default function WishesSection() {
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 400,
-            fontSize: "clamp(14px, 3.8vw, 17px)",
-            lineHeight: 1.7,
+            fontSize: "clamp(12px, 3.4vw, 14px)",
+            lineHeight: 1.65,
             color: "rgba(44,90,138,0.7)",
             letterSpacing: "0.05em",
-            marginTop: "18px",
+            marginTop: "14px",
           }}
         >
           Иногда маленький жест меняет целую жизнь.
