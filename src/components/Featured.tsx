@@ -428,16 +428,20 @@ export default function Featured() {
                       height: "100px",
                       borderRadius: "50%",
                       overflow: "hidden",
+                      backgroundColor: "#ece8e1",
                       border: "1.5px solid rgba(255,255,255,0.3)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
                     <img
                       src={item.img}
                       alt={item.title}
                       style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
+                        width: "85%",
+                        height: "85%",
+                        objectFit: "contain",
                       }}
                     />
                   </div>
