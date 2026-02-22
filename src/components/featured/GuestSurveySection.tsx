@@ -60,7 +60,7 @@ export default function GuestSurveySection() {
             border: "none",
             cursor: "pointer",
             minWidth: "240px",
-            marginTop: "32px",
+            marginTop: "2px",
           }}
         >
           <svg
