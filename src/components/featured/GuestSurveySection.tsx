@@ -34,7 +34,7 @@ export default function GuestSurveySection() {
             lineHeight: 1.7,
             color: "#2c5a8a",
             letterSpacing: "0.03em",
-            marginTop: "60px",
+            marginTop: "40px",
           }}
         >
           Нам важно, чтобы в этот день вам было легко и комфортно, поэтому будем
