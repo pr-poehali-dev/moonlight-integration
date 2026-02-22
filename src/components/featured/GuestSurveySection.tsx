@@ -1,7 +1,7 @@
 export default function GuestSurveySection() {
   return (
     <div
-      className="w-full relative flex flex-col items-center justify-center"
+      className="w-full relative flex flex-col items-center"
       style={{
         backgroundImage:
           "url('https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/1f48ce64-369e-462b-9a28-e64d64bf627a.jpg')",
@@ -12,11 +12,13 @@ export default function GuestSurveySection() {
       }}
     >
       <div
-        className="flex flex-col items-center text-center"
+        className="absolute left-0 right-0 flex flex-col items-center text-center"
         style={{
           maxWidth: "380px",
-          marginTop: "auto",
-          marginBottom: "32%",
+          top: "35%",
+          transform: "translateY(-50%)",
+          margin: "0 auto",
+          padding: "0 28px",
         }}
       >
         <p
