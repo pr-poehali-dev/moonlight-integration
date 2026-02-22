@@ -3,6 +3,7 @@ import CalendarSection from "./featured/CalendarSection";
 import VenueSection from "./featured/VenueSection";
 import ProgramSection from "./featured/ProgramSection";
 import DressCodeSection from "./featured/DressCodeSection";
+import GuestSurveySection from "./featured/GuestSurveySection";
 
 export default function Featured() {
   return (
@@ -16,6 +17,7 @@ export default function Featured() {
       <VenueSection />
       <ProgramSection />
       <DressCodeSection />
+      <GuestSurveySection />
     </div>
   );
 }
