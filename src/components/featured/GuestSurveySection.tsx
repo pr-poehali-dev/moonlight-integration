@@ -7,7 +7,7 @@ export default function GuestSurveySection() {
           "url('https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/1f48ce64-369e-462b-9a28-e64d64bf627a.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        minHeight: "90vh",
+        minHeight: "75vh",
         padding: "0 28px",
       }}
     >
@@ -16,7 +16,7 @@ export default function GuestSurveySection() {
         style={{
           maxWidth: "380px",
           marginTop: "auto",
-          marginBottom: "auto",
+          marginBottom: "38%",
         }}
       >
         <p
@@ -42,7 +42,7 @@ export default function GuestSurveySection() {
             padding: "16px 48px",
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 600,
-            fontSize: "clamp(15px, 4vw, 19px)",
+            fontSize: "clamp(17px, 4.5vw, 22px)",
             color: "#2c5a8a",
             letterSpacing: "0.15em",
             background: "rgba(255,255,255,0.45)",
