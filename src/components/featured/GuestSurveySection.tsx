@@ -48,7 +48,7 @@ export default function GuestSurveySection() {
           className="relative"
           style={{
             display: "inline-block",
-            padding: "16px 48px",
+            padding: "10px 48px",
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 600,
             fontSize: "clamp(15px, 4vw, 19px)",
