@@ -19,7 +19,7 @@ export default function GuestSurveySection() {
       <div
         className="absolute left-0 right-0 flex flex-col items-center text-center"
         style={{
-          maxWidth: "380px",
+          maxWidth: "440px",
           top: "45%",
           transform: "translateY(-50%)",
           margin: "0 auto",
@@ -34,7 +34,7 @@ export default function GuestSurveySection() {
             lineHeight: 1.7,
             color: "#2c5a8a",
             letterSpacing: "0.03em",
-            marginTop: "40px",
+            marginTop: "60px",
           }}
         >
           Нам важно, чтобы в этот день вам было легко и комфортно, поэтому будем
