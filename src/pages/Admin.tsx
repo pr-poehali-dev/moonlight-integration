@@ -407,4 +407,3 @@ const smallBtnStyle: React.CSSProperties = {
   cursor: "pointer",
 };
 
-export default Admin;
