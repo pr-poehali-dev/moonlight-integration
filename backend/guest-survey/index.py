@@ -4,7 +4,7 @@ import psycopg2
 
 CORS_HEADERS = {
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Authorization',
     'Access-Control-Max-Age': '86400',
 }
@@ -28,6 +28,8 @@ def handler(event, context):
         return handle_admin_login(event)
     elif method == 'GET' and action == 'surveys':
         return handle_admin_surveys(event, schema)
+    elif method == 'POST' and action == 'delete':
+        return handle_admin_delete(event, schema)
     else:
         return response(200, {'status': 'ok'})
 
@@ -124,6 +126,25 @@ def handle_admin_surveys(event, schema):
             'drinks': drink_stats,
         }
     })
+
+def handle_admin_delete(event, schema):
+    auth = event.get('headers', {}).get('X-Authorization', '') or event.get('headers', {}).get('x-authorization', '')
+    if not auth:
+        return response(401, {'error': 'Требуется авторизация'})
+
+    body = json.loads(event.get('body', '{}'))
+    survey_id = body.get('id')
+    if not survey_id:
+        return response(400, {'error': 'ID анкеты обязателен'})
+
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("DELETE FROM {}.guest_surveys WHERE id = {}".format(schema, int(survey_id)))
+    conn.commit()
+    cur.close()
+    conn.close()
+
+    return response(200, {'success': True})
 
 def response(status, body):
     return {

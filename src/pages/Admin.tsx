@@ -95,6 +95,20 @@ export default function Admin() {
     if (token) loadSurveys();
   }, [token, loadSurveys]);
 
+  const handleDelete = async (id: number) => {
+    if (!confirm("Удалить эту анкету?")) return;
+    try {
+      await fetch(`${API_URL}?action=delete`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ id }),
+      });
+      loadSurveys();
+    } catch {
+      console.error("Failed to delete");
+    }
+  };
+
   const handleLogout = () => {
     setToken("");
     sessionStorage.removeItem("admin_token");
@@ -305,13 +319,31 @@ export default function Admin() {
                     {s.will_attend ? "✓ Придёт" : "✕ Не придёт"}
                   </p>
                 </div>
-                <p style={{
-                  fontSize: "12px",
-                  color: "rgba(44,90,138,0.5)",
-                  whiteSpace: "nowrap",
-                }}>
-                  {s.created_at ? new Date(s.created_at).toLocaleString("ru-RU") : ""}
-                </p>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <p style={{
+                    fontSize: "12px",
+                    color: "rgba(44,90,138,0.5)",
+                    whiteSpace: "nowrap",
+                  }}>
+                    {s.created_at ? new Date(s.created_at).toLocaleString("ru-RU") : ""}
+                  </p>
+                  <button
+                    onClick={() => handleDelete(s.id)}
+                    style={{
+                      padding: "4px 10px",
+                      fontSize: "12px",
+                      color: "#c44",
+                      background: "rgba(200,60,60,0.08)",
+                      border: "1px solid rgba(200,60,60,0.2)",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                      fontFamily: "'Cormorant Garamond', serif",
+                      fontWeight: 600,
+                    }}
+                  >
+                    Удалить
+                  </button>
+                </div>
               </div>
 
               {s.will_attend && (
@@ -406,4 +438,3 @@ const smallBtnStyle: React.CSSProperties = {
   borderRadius: "6px",
   cursor: "pointer",
 };
-
