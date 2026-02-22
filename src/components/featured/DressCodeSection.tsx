@@ -1,4 +1,9 @@
+import { useState } from "react";
+import LadiesGallery from "./LadiesGallery";
+
 export default function DressCodeSection() {
+  const [isLadiesGalleryOpen, setIsLadiesGalleryOpen] = useState(false);
+
   return (
     <div
       className="w-full relative"
@@ -36,6 +41,7 @@ export default function DressCodeSection() {
           <button
             type="button"
             className="relative"
+            onClick={() => setIsLadiesGalleryOpen(true)}
             style={{
               display: "inline-block",
               padding: "16px 48px",
@@ -112,6 +118,12 @@ export default function DressCodeSection() {
           </button>
         </div>
       </div>
+
+      {/* Ladies Gallery Modal */}
+      <LadiesGallery
+        isOpen={isLadiesGalleryOpen}
+        onClose={() => setIsLadiesGalleryOpen(false)}
+      />
     </div>
   );
 }
