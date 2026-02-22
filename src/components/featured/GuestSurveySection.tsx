@@ -1,4 +1,9 @@
+import { useState } from "react";
+import GuestSurveyModal from "./GuestSurveyModal";
+
 export default function GuestSurveySection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div
       className="w-full relative flex flex-col items-center"
@@ -37,8 +42,9 @@ export default function GuestSurveySection() {
           🤍
         </p>
 
-        <a
-          href="#anketa"
+        <button
+          type="button"
+          onClick={() => setIsModalOpen(true)}
           className="relative"
           style={{
             display: "inline-block",
@@ -51,7 +57,7 @@ export default function GuestSurveySection() {
             background: "rgba(255,255,255,0.45)",
             backdropFilter: "blur(6px)",
             WebkitBackdropFilter: "blur(6px)",
-            textDecoration: "none",
+            border: "none",
             cursor: "pointer",
             minWidth: "240px",
             marginTop: "32px",
@@ -64,47 +70,24 @@ export default function GuestSurveySection() {
             fill="none"
             style={{ overflow: "visible" }}
           >
-            <rect
-              x="6"
-              y="6"
-              width="228"
-              height="44"
-              rx="2"
-              stroke="#2c5a8a"
-              strokeWidth="1.2"
-            />
+            <rect x="6" y="6" width="228" height="44" rx="2" stroke="#2c5a8a" strokeWidth="1.2" />
             <path d="M20 0 L220 0" stroke="#2c5a8a" strokeWidth="0.8" />
             <path d="M20 56 L220 56" stroke="#2c5a8a" strokeWidth="0.8" />
             <path d="M0 16 L0 40" stroke="#2c5a8a" strokeWidth="0.8" />
             <path d="M240 16 L240 40" stroke="#2c5a8a" strokeWidth="0.8" />
-            <path
-              d="M20 0 Q0 0 0 16"
-              stroke="#2c5a8a"
-              strokeWidth="0.8"
-              fill="none"
-            />
-            <path
-              d="M220 0 Q240 0 240 16"
-              stroke="#2c5a8a"
-              strokeWidth="0.8"
-              fill="none"
-            />
-            <path
-              d="M20 56 Q0 56 0 40"
-              stroke="#2c5a8a"
-              strokeWidth="0.8"
-              fill="none"
-            />
-            <path
-              d="M220 56 Q240 56 240 40"
-              stroke="#2c5a8a"
-              strokeWidth="0.8"
-              fill="none"
-            />
+            <path d="M20 0 Q0 0 0 16" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+            <path d="M220 0 Q240 0 240 16" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+            <path d="M20 56 Q0 56 0 40" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
+            <path d="M220 56 Q240 56 240 40" stroke="#2c5a8a" strokeWidth="0.8" fill="none" />
           </svg>
           Анкета гостя
-        </a>
+        </button>
       </div>
+
+      <GuestSurveyModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }
