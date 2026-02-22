@@ -65,11 +65,11 @@ export default function ProgramSection() {
 
         <div className="flex flex-col gap-0">
           {[
-            { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/66cb0bcd-59b4-4467-b07e-0ae82a0f6513.jpg" },
-            { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/005db500-5df8-44e3-a860-a063ff1bbecc.jpg" },
-            { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/06742f21-3602-402e-a990-5d842737af4b.jpg" },
-            { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/002d17c1-46b3-4151-a830-f878cee88ffc.jpg" },
-            { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/ee86e747-dea9-44c4-8f9e-24e6704a72ae.jpg" },
+            { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/14bcd6c8-1e63-4e50-9017-46de9e418db6.jpg" },
+            { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/115b0ca5-45e8-4a64-864e-be786b27fd37.jpg" },
+            { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/73784bc6-b6cd-4b7a-8bde-df7902354aa2.jpg" },
+            { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/51522cd4-5f1c-495c-a323-adbd51dede89.jpg" },
+            { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/187963a0-9fc6-4158-85b9-292bbe325bb3.jpg" },
           ].map((item, i) => (
             <div key={i} className="flex items-center" style={{ minHeight: "130px" }}>
               <div
@@ -83,7 +83,6 @@ export default function ProgramSection() {
                     borderRadius: "50%",
                     overflow: "hidden",
                     border: "1.5px solid rgba(255,255,255,0.3)",
-                    backgroundColor: "#ece8e1",
                   }}
                 >
                   <img
@@ -97,6 +96,7 @@ export default function ProgramSection() {
                   />
                 </div>
               </div>
+              <div style={{ width: "16px", flexShrink: 0 }} />
               <div
                 className="flex-shrink-0"
                 style={{
@@ -112,20 +112,20 @@ export default function ProgramSection() {
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
-                    width: "8px",
-                    height: "8px",
+                    width: "7px",
+                    height: "7px",
                     borderRadius: "50%",
                     backgroundColor: "#ffffff",
                   }}
                 />
               </div>
-              <div style={{ width: "67%", paddingLeft: "24px" }}>
+              <div style={{ flex: 1, paddingLeft: "20px" }}>
                 <p
                   className="uppercase"
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontWeight: 600,
-                    fontSize: "clamp(15px, 4.2vw, 19px)",
+                    fontSize: "clamp(18px, 5vw, 24px)",
                     color: "#ffffff",
                     letterSpacing: "0.12em",
                   }}
@@ -136,7 +136,7 @@ export default function ProgramSection() {
                   style={{
                     fontFamily: "'Montserrat', sans-serif",
                     fontWeight: 300,
-                    fontSize: "clamp(13px, 3.5vw, 16px)",
+                    fontSize: "clamp(14px, 3.8vw, 17px)",
                     color: "rgba(255,255,255,0.55)",
                     marginTop: "4px",
                     letterSpacing: "0.05em",
