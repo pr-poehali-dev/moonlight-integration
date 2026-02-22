@@ -411,11 +411,11 @@ export default function Featured() {
           {/* Элементы программы */}
           <div className="flex flex-col gap-0">
             {[
-              { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/14bcd6c8-1e63-4e50-9017-46de9e418db6.jpg" },
-              { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/115b0ca5-45e8-4a64-864e-be786b27fd37.jpg" },
-              { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/73784bc6-b6cd-4b7a-8bde-df7902354aa2.jpg" },
-              { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/51522cd4-5f1c-495c-a323-adbd51dede89.jpg" },
-              { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/187963a0-9fc6-4158-85b9-292bbe325bb3.jpg" },
+              { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/e1e7e64e-19e4-4f59-a808-61f773f9d53e.jpg" },
+              { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/52a0409d-5fda-4fda-8ad2-0131c42717f7.jpg" },
+              { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/63fa2789-b77c-42fb-add5-fd91d8d5e886.jpg" },
+              { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/b463a911-b9a4-4d1c-afb7-3891205d9e34.jpg" },
+              { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/5159676f-fc6a-45a5-acd9-032b6b9634b2.jpg" },
             ].map((item, i) => (
               <div key={i} className="flex items-center" style={{ minHeight: "130px" }}>
                 <div
