@@ -16,7 +16,7 @@ export default function GuestSurveySection() {
         style={{
           maxWidth: "380px",
           marginTop: "auto",
-          marginBottom: "auto",
+          marginBottom: "32%",
         }}
       >
         <p
