@@ -412,25 +412,35 @@ export default function Featured() {
           <div className="flex flex-col gap-0">
             {[
               { time: "15:00", title: "Сбор гостей", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/413aa284-4268-4f2a-aa00-ea7a1b40b481.png" },
-              { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/8fdb52fa-0a3b-43b3-8585-35b11b2f8b68.png" },
-              { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/bd1edb32-e010-4ab7-81ba-4cd161123a27.jpg" },
-              { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/60406ff8-fc43-4ad3-a704-3eaa1f096968.jpg" },
-              { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/a26eb8c3-1cd9-482d-b85d-a0b7de747630.jpg" },
+              { time: "16:00", title: "Церемония", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/files/760b2d38-b5a6-4e8a-8837-9fd31bbb0725.jpg" },
+              { time: "17:00", title: "Ужин", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/df57a842-dfbe-4060-a6e4-8697781c9052.jpg" },
+              { time: "21:00", title: "Вечеринка", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/b75cc59e-dc1a-4242-bc55-8f4c1026053a.jpg" },
+              { time: "23:00", title: "Финал", img: "https://cdn.poehali.dev/projects/da5d93b7-b242-4760-a09d-70b7a28ffd4f/bucket/fae3319c-b4f9-46c3-b45f-34d28a9b55b2.jpg" },
             ].map((item, i) => (
               <div key={i} className="flex items-center" style={{ minHeight: "130px" }}>
                 <div
                   className="flex items-center justify-center flex-shrink-0"
                   style={{ width: "33%" }}
                 >
-                  <img
-                    src={item.img}
-                    alt={item.title}
+                  <div
                     style={{
-                      width: "110px",
-                      height: "110px",
-                      objectFit: "contain",
+                      width: "100px",
+                      height: "100px",
+                      borderRadius: "50%",
+                      overflow: "hidden",
+                      border: "1.5px solid rgba(255,255,255,0.3)",
                     }}
-                  />
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
                 </div>
                 <div
                   className="flex-shrink-0"
