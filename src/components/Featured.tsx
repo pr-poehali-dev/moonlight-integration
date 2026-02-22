@@ -442,21 +442,36 @@ export default function Featured() {
                     />
                   </div>
                 </div>
+                <div style={{ width: "16px", flexShrink: 0 }} />
                 <div
                   className="flex-shrink-0"
                   style={{
                     width: "1px",
                     alignSelf: "stretch",
                     backgroundColor: "rgba(255,255,255,0.25)",
+                    position: "relative",
                   }}
-                />
-                <div style={{ width: "67%", paddingLeft: "24px" }}>
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      width: "7px",
+                      height: "7px",
+                      borderRadius: "50%",
+                      backgroundColor: "#ffffff",
+                    }}
+                  />
+                </div>
+                <div style={{ flex: 1, paddingLeft: "20px" }}>
                   <p
                     className="uppercase"
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       fontWeight: 600,
-                      fontSize: "clamp(15px, 4.2vw, 19px)",
+                      fontSize: "clamp(18px, 5vw, 24px)",
                       color: "#ffffff",
                       letterSpacing: "0.12em",
                     }}
@@ -467,7 +482,7 @@ export default function Featured() {
                     style={{
                       fontFamily: "'Montserrat', sans-serif",
                       fontWeight: 300,
-                      fontSize: "clamp(13px, 3.5vw, 16px)",
+                      fontSize: "clamp(14px, 3.8vw, 17px)",
                       color: "rgba(255,255,255,0.55)",
                       marginTop: "4px",
                       letterSpacing: "0.05em",
