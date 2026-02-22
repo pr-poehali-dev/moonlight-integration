@@ -78,8 +78,8 @@ export default function ProgramSection() {
               >
                 <div
                   style={{
-                    width: "100px",
-                    height: "100px",
+                    width: "110px",
+                    height: "110px",
                     borderRadius: "50%",
                     overflow: "hidden",
                     border: "1.5px solid rgba(255,255,255,0.3)",
@@ -89,9 +89,12 @@ export default function ProgramSection() {
                     src={item.img}
                     alt={item.title}
                     style={{
-                      width: "100%",
-                      height: "100%",
+                      width: "140%",
+                      height: "140%",
                       objectFit: "cover",
+                      objectPosition: "center center",
+                      marginLeft: "-20%",
+                      marginTop: "-20%",
                     }}
                   />
                 </div>
