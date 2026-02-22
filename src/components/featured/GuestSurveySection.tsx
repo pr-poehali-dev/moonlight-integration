@@ -15,7 +15,7 @@ export default function GuestSurveySection() {
         className="absolute left-0 right-0 flex flex-col items-center text-center"
         style={{
           maxWidth: "380px",
-          top: "35%",
+          top: "45%",
           transform: "translateY(-50%)",
           margin: "0 auto",
           padding: "0 28px",
